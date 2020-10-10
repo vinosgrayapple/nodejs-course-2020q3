@@ -1,9 +1,11 @@
 {
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "javascript.validate.enable": false,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  "editor.semanticHighlighting.enabled": false,
+  "workbench.colorTheme": "Material Theme Darker High Contrast",
+  "workbench.preferredDarkColorTheme": "Community Material Theme High Contrast",
+  "workbench.preferredLightColorTheme": "Default Dark+",
+  "editor.fontWeight": "normal",
+  "editor.fontFamily": "'Operator Mono Light',Consolas, 'Courier New', monospace",
+  "terminal.integrated.fontWeight": "100",
+  "terminal.integrated.fontWeightBold": "100",
+  "terminal.integrated.fontFamily": "Consolas, monospace"
 }
