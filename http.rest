@@ -1,0 +1,26 @@
+### Get All users
+GET http://localhost:4000/users
+
+### Get user by ID
+GET http://localhost:4000/users/4ebda45f-cdd7-4f75-b17f-a3d00599b212
+### Post User
+POST http://localhost:4000/users HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Barak",
+    "login": "Vinmor",
+    "password": "{{$guid}}"
+}
+
+### Remove user
+DELETE http://localhost:4000/users/8c800f82-ec69-465f-862a-f734a7f52eae
+
+### Update
+PUT http://localhost:4000/users/8c800f82-ec69-465f-862a-f734a7f52eae
+content-type: application/json
+
+{
+    "name": "Barak",
+    "login": "Vinmor"
+}
