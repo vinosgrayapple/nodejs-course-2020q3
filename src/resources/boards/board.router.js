@@ -1,50 +1,50 @@
-// const router = require('express').Router()
-// const User = require('./user.model')
-// const usersService = require('./user.service')
-// // get All Users
-// router.route('/').get(async (req, res) => {
-//   const users = await usersService.getAll()
-//   res.json(users.map(User.toResponse))
-// })
-// // Create User
-// router.route('/').post(async (req, res) => {
-//   console.log()
-//   try {
-//     const user = await usersService.create(req.body)
-//     res.json(User.toResponse(user))
-//   } catch (error) {
-//     res.status(404).send(error.message)
-//   }
-// })
-// // Get user by ID
-// router.route('/:id').get(async (req, res) => {
-//   const { id } = req.params
-//   try {
-//     const user = await usersService.get(id)
-//     res.json(User.toResponse(user))
-//   } catch (error) {
-//     res.status(404).send(error.message)
-//   }
-// })
-// // Update User by ID
-// router.put('/:id', async (req, res) => {
-//   const { id } = req.params
-//   const updateForUser = req.body
-//   try {
-//     const userNew = await usersService.update(id, updateForUser)
-//     res.json(User.toResponse(userNew))
-//   } catch (error) {
-//     res.status(404).send(error.message)
-//   }
-// })
-// // Delete User by ID
-// router.delete('/:id', async (req, res) => {
-//   const { id } = req.params
-//   try {
-//     const deletedUser = await usersService.remove(id)
-//     res.json(User.toResponse(deletedUser))
-//   } catch (error) {
-//     res.status(404).send(error.message)
-//   }
-// })
-// module.exports = router
+const router = require('express').Router()
+// const Board = require('./board.model')
+const boardsService = require('./board.service')
+// get All Boardss
+router.route('/').get(async (req, res) => {
+  const boards = await boardsService.getAll()
+  // console.log('boards: >> ', boards)
+  res.json(boards)
+})
+// Create Boards
+router.route('/').post(async (req, res) => {
+  try {
+    await boardsService.create(req.body)
+    res.sendStatus(200)
+  } catch (error) {
+    res.status(404).send(error.message)
+  }
+})
+// Get Boards by ID
+router.route('/:id').get(async (req, res) => {
+  const { id } = req.params
+  try {
+    const boards = await boardsService.get(id)
+    res.json(boards)
+  } catch (error) {
+    res.status(404).send(error.message)
+  }
+})
+// Update User by ID
+router.put('/:id', async (req, res) => {
+  const { id } = req.params
+  const updateForBoard = req.body
+  try {
+    const boardNew = await boardsService.update(id, updateForBoard)
+    res.json(boardNew)
+  } catch (error) {
+    res.status(404).send(error.message)
+  }
+})
+// Delete board by ID
+router.delete('/:id', async (req, res) => {
+  const { id } = req.params
+  try {
+    await boardsService.remove(id)
+    res.sendStatus(200)
+  } catch (error) {
+    res.status(404).send(error.message)
+  }
+})
+module.exports = router

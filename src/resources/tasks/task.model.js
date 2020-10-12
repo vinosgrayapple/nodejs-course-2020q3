@@ -1,22 +1,23 @@
 const uuid = require('uuid')
 
-class User {
+class Task {
   constructor({
     id = uuid(),
-    name = 'USER',
-    login = 'user',
-    password = 'P@55w0rd'
+    title = 'Finish Course NodeJS',
+    order = 0,
+    description = 'work!work!work!',
+    userId = null, // assignee
+    boardId = null,
+    columnId = null
   } = {}) {
     this.id = id
-    this.name = name
-    this.login = login
-    this.password = password
-  }
-
-  static toResponse(user) {
-    const { id, name, login } = user
-    return { id, name, login }
+    this.title = title
+    this.order = order
+    this.description = description
+    this.userId = userId
+    this.boardId = boardId
+    this.columnId = columnId
   }
 }
 
-module.exports = User
+module.exports = Task

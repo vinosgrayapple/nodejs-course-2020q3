@@ -1,8 +1,9 @@
-// const usersRepo = require('./user.memory.repository')
+const boardsRepo = require('./board.memory.repository')
 
-// const getAll = () => usersRepo.getAll()
-// const get = id => usersRepo.get(id)
-// const create = user => usersRepo.create(user)
-// const remove = id => usersRepo.remove(id)
-// const update = (id, updateForUser) => usersRepo.update(id, updateForUser)
-// module.exports = { getAll, get, create, update, remove }
+const getAll = () => boardsRepo.getAll()
+const get = id => boardsRepo.get(id)
+const create = board => boardsRepo.create(board)
+const remove = id => boardsRepo.remove(id)
+const update = (id, updateForBoard) => boardsRepo.update(id, updateForBoard)
+
+module.exports = { getAll, get, create, update, remove }

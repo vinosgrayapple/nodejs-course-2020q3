@@ -1,6 +1,7 @@
 const router = require('express').Router()
 const User = require('./user.model')
 const usersService = require('./user.service')
+
 // get All Users
 router.route('/').get(async (req, res) => {
   try {
@@ -13,7 +14,6 @@ router.route('/').get(async (req, res) => {
 })
 // Create User
 router.route('/').post(async (req, res) => {
-  console.log()
   try {
     const user = await usersService.create(req.body)
     res.json(User.toResponse(user))
@@ -46,8 +46,8 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   const { id } = req.params
   try {
-    const deletedUser = await usersService.remove(id)
-    res.json(User.toResponse(deletedUser))
+    await usersService.remove(id)
+    res.sendStatus(200)
   } catch (error) {
     res.status(404).send(error.message)
   }

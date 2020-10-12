@@ -1,19 +1,19 @@
 const DB = require('../../common/inMemoryDB')
 
-const getAll = async () => DB.getAllUsers()
+const getAll = async boardId => DB.getAllTasks(boardId)
 
 const get = async id => {
-  const user = await DB.getUser(id)
-  if (!user) {
-    throw new Error(`Ой-ой! The user with id: ${id} was not found`)
+  const task = await DB.getTask(id)
+  if (!task) {
+    throw new Error(`Ой-ой! The task with id: ${id} was not found`)
   }
-  return user
+  return task
 }
 
-const create = async user => await DB.createUser(user)
-const remove = async id => await DB.removeUser(id)
-const update = async (id, userNew) => {
-  await DB.updateUser(id, userNew)
+const create = async (boardId, task) => await DB.createTask(boardId, task)
+const remove = async id => await DB.removeTask(id)
+const update = async (id, taskNew) => {
+  await DB.updateTask(id, taskNew)
   return await get(id)
 }
 
