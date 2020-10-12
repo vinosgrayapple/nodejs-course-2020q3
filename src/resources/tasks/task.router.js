@@ -44,9 +44,9 @@ router.put('/:id', async (req, res) => {
 })
 // Delete task by ID
 router.delete('/:id', async (req, res) => {
-  const { id } = req.params
+  const { id, boardId } = req.params
   try {
-    await tasksService.remove(id)
+    await tasksService.remove(boardId, id)
     res.sendStatus(200)
   } catch (error) {
     res.status(404).send(error.message)

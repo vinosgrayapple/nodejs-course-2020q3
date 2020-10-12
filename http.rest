@@ -3,7 +3,7 @@ GET http://localhost:5000/boards
 
 ### Get All users
 const boardID = 'a270c6b9-886c-4e38-97b5-8cea9d0c88c0'
-GET http://localhost:4000/boards/{{a270c6b9-886c-4e38-97b5-8cea9d0c88c0}}/tasks/edc9a9ca-c5cb-46f6-b131-5576862f1c43
+GET http://localhost:4000/boards//tasks/edc9a9ca-c5cb-46f6-b131-5576862f1c43
 
 ###
 

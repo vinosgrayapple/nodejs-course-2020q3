@@ -196,6 +196,7 @@ describe('Boards suite', () => {
         .delete(routes.boards.delete(boardId))
         .then(response => expect(response.status).oneOf([200, 204]))
 
+      console.log('boardTaskIds :>> ', boardTaskIds)
       await Promise.all(
         boardTaskIds.map(async taskId =>
           request.get(routes.tasks.getById(boardId, taskId)).expect(404)

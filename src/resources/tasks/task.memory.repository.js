@@ -11,7 +11,7 @@ const get = async id => {
 }
 
 const create = async (boardId, task) => await DB.createTask(boardId, task)
-const remove = async id => await DB.removeTask(id)
+const remove = async (boardId, id) => await DB.removeTask(boardId, id)
 const update = async (id, taskNew) => {
   await DB.updateTask(id, taskNew)
   return await get(id)
