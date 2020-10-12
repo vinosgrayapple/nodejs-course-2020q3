@@ -44,10 +44,10 @@ router.put('/:id', async (req, res) => {
 })
 // Delete User by ID
 router.delete('/:id', async (req, res) => {
-  const { id } = req.params
   try {
+    const { id } = req.params
     await usersService.remove(id)
-    res.sendStatus(200)
+    res.sendStatus(204)
   } catch (error) {
     res.status(404).send(error.message)
   }

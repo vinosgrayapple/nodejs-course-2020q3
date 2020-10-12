@@ -43,8 +43,13 @@ const createUser = async user => {
 }
 
 const removeUser = async id => {
+  // const tasks = await db.tasks.find({ userId: id })
+  await db.tasks.update(
+    { userId: id },
+    { $set: { userId: null } },
+    { multi: true }
+  )
   await db.users.remove({ id })
-  await db.tasks.update({ iserId: id }, { $set: { userId: null } })
 }
 
 const updateUser = async (id, userNew) =>
@@ -59,6 +64,7 @@ const createBoard = async board => {
   return newboard
 }
 const removeBoard = async id => {
+  await db.tasks.remove({ boardId: id })
   await db.boards.remove({ id })
 }
 const updateBoard = async (id, boardNew) =>
@@ -77,9 +83,9 @@ const createTask = async (boardId, task) => {
   await db.tasks.insert(newTask)
   return newTask
 }
-const removeTask = async (boardId, id) => {
-  const task = await getTask(boardId, id)
-  await db.tasks.remove({ boardId, id })
+const removeTask = async id => {
+  const task = await getTask(id)
+  await db.tasks.remove({ id })
   return task
 }
 const updateTask = async (id, taskNew) => {

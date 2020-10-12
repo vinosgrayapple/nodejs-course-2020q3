@@ -23,9 +23,9 @@ router.route('/').post(async (req, res) => {
 // Get task  by ID
 router.route('/:id').get(async (req, res) => {
   const { id } = req.params
-  console.log('taskRouter, getTask')
   try {
     const task = await tasksService.get(id)
+    if (!task) res.sendStatus(404)
     res.json(task)
   } catch (error) {
     res.status(404).send(error.message)
@@ -44,9 +44,9 @@ router.put('/:id', async (req, res) => {
 })
 // Delete task by ID
 router.delete('/:id', async (req, res) => {
-  const { id, boardId } = req.params
+  const { id } = req.params
   try {
-    await tasksService.remove(id, boardId)
+    await tasksService.remove(id)
     res.sendStatus(200)
   } catch (error) {
     res.status(404).send(error.message)

@@ -20,8 +20,9 @@ router.route('/').post(async (req, res) => {
 router.route('/:id').get(async (req, res) => {
   const { id } = req.params
   try {
-    const boards = await boardsService.get(id)
-    res.json(boards)
+    const board = await boardsService.get(id)
+    if (!board) throw new Error('Not Found')
+    res.json(board)
   } catch (error) {
     res.status(404).send(error.message)
   }
@@ -39,8 +40,8 @@ router.put('/:id', async (req, res) => {
 })
 // Delete board by ID
 router.delete('/:id', async (req, res) => {
-  const { id } = req.params
   try {
+    const { id } = req.params
     await boardsService.remove(id)
     res.sendStatus(200)
   } catch (error) {
