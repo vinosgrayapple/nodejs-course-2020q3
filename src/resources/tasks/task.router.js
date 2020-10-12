@@ -14,20 +14,18 @@ router.route('/').get(async (req, res) => {
 router.route('/').post(async (req, res) => {
   try {
     const { boardId } = req.params
-    console.log('task-create => req.params :>> ', req.params)
-    console.log('boardId :>> ', boardId)
     const task = await tasksService.create(boardId, req.body)
-    res.json(task)
+    res.status(200).send(task)
   } catch (error) {
     res.status(404).send(error.message)
   }
 })
 // Get task  by ID
 router.route('/:id').get(async (req, res) => {
-  const { id, boardId } = req.params
+  const { id } = req.params
   console.log('taskRouter, getTask')
   try {
-    const task = await tasksService.get(boardId, id)
+    const task = await tasksService.get(id)
     res.json(task)
   } catch (error) {
     res.status(404).send(error.message)
@@ -35,11 +33,11 @@ router.route('/:id').get(async (req, res) => {
 })
 // Update User by ID
 router.put('/:id', async (req, res) => {
-  const { id, boardId } = req.params
-  const updateForTask = req.body
   try {
-    const taskNew = await tasksService.update(boardId, id, updateForTask)
-    res.json(taskNew)
+    const { id } = req.params
+    const updateForTask = req.body
+    const taskNew = await tasksService.update(id, updateForTask)
+    res.status(200).send(taskNew)
   } catch (error) {
     res.status(404).send(error.message)
   }

@@ -50,7 +50,7 @@ const removeUser = async id => {
 const updateUser = async (id, userNew) =>
   await db.users.update({ id }, { $set: userNew }, { returnUpdatedDocs: true })
 // =======================BOARDS=======================================================
-const getAllBoards = async () => await db.boards.find()
+const getAllBoards = async () => await db.boards.find({})
 const getBoard = async id => await db.boards.findOne({ id })
 
 const createBoard = async board => {
@@ -72,11 +72,7 @@ const getAllTasks = async boardId => await db.tasks.find({ boardId })
 const getTask = async id => await db.tasks.findOne({ id })
 
 const createTask = async (boardId, task) => {
-  const board = await getBoard(boardId)
-  task.boardId = board.id
-  // console.log('board.columns[0].id', board.columns[0].id)
-  task.columnId = board.columns[0].id
-  console.log(task)
+  task.boardId = boardId
   const newTask = new Task(task)
   await db.tasks.insert(newTask)
   return newTask

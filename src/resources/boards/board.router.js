@@ -1,7 +1,7 @@
 const router = require('express').Router()
 // const Board = require('./board.model')
 const boardsService = require('./board.service')
-// get All Boardss
+// get All Boards
 router.route('/').get(async (req, res) => {
   const boards = await boardsService.getAll()
   // console.log('boards: >> ', boards)
@@ -10,8 +10,8 @@ router.route('/').get(async (req, res) => {
 // Create Boards
 router.route('/').post(async (req, res) => {
   try {
-    await boardsService.create(req.body)
-    res.sendStatus(200)
+    const board = await boardsService.create(req.body)
+    res.status(200).send(board)
   } catch (error) {
     res.status(404).send(error.message)
   }
