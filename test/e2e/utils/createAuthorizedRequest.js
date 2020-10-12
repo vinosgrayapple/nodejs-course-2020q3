@@ -1,25 +1,25 @@
-const { routes } = require('../lib');
+const { routes } = require('../lib')
 
 const createRequestWithToken = (request, token) => {
-  const obj = {};
+  const obj = {}
   for (const key in request) {
     if (Object.prototype.hasOwnProperty.call(request, key)) {
-      const method = request[key];
-      obj[key] = path => method(path).set('Authorization', token);
+      const method = request[key]
+      obj[key] = path => method(path).set('Authorization', token)
     }
   }
 
-  return obj;
-};
+  return obj
+}
 
 const createAuthorizedRequest = async request => {
   const res = await request
     .post(routes.login)
     .set('Accept', 'application/json')
-    .send({ login: 'admin', password: 'admin' });
+    .send({ login: 'admin', password: 'admin' })
 
-  const token = `Bearer ${res.body.token}`;
-  return createRequestWithToken(request, token);
-};
+  const token = `Bearer ${res.body.token}`
+  return createRequestWithToken(request, token)
+}
 
-module.exports = createAuthorizedRequest;
+module.exports = createAuthorizedRequest
