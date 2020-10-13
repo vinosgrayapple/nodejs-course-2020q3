@@ -19,10 +19,10 @@ db.tasks = Datastore.create(/* './db/tasks.db' */)
       .insert([new Board(), new Board(), new Board()])
       .catch(err => console.log(err))
     const boards = await db.boards.find({})
-    boards.forEach(async board => {
+    boards.forEach(async (board, i) => {
       db.tasks.insert([
         new Task({
-          title: 'Hello',
+          title: `Task #${i}`,
           description: 'lorem parabellum',
           boardId: board.id,
           columnId: board.columns[0].id
