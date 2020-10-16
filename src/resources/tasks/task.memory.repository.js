@@ -1,6 +1,6 @@
 const DB = require('../../common/inMemoryDB')
-
-const getAll = async boardId => DB.getAllTasks(boardId)
+const TASKS = 'tasks'
+const getAll = async boardId => DB.getAll(TASKS, boardId)
 
 const get = async id => {
   const task = await DB.getTask(id)
