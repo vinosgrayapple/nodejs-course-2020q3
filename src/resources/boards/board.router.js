@@ -4,7 +4,6 @@ const boardsService = require('./board.service')
 // get All Boards
 router.route('/').get(async (req, res) => {
   const boards = await boardsService.getAll()
-  // console.log('boards: >> ', boards)
   res.json(boards)
 })
 // Create Boards

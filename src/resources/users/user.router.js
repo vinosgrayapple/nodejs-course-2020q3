@@ -6,7 +6,6 @@ const usersService = require('./user.service')
 router.route('/').get(async (req, res) => {
   try {
     const users = await usersService.getAll()
-    // console.log('users: >>', users)
     res.json(users.map(User.toResponse))
   } catch (error) {
     res.status(404).send(error.message)

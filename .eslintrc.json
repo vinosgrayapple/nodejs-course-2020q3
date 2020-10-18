@@ -171,7 +171,7 @@
     "comma-style": [2, "last"],
     "computed-property-spacing": [2, "never"],
     "eol-last": 2,
-    "func-names": 1,
+    "func-names": 0,
     "func-style": [
       2,
       "declaration",
@@ -214,7 +214,7 @@
     "space-before-function-paren": [
       2,
       {
-        "anonymous": "always",
+        "anonymous": "never",
         "named": "never"
       }
     ],
