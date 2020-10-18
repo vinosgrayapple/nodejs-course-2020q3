@@ -1,5 +1,5 @@
 const { createLogger, format, transports } = require('winston')
-
+const appRoot = require('app-root-path').path
 module.exports = createLogger({
   level: 'info',
   format: format.combine(
@@ -10,13 +10,12 @@ module.exports = createLogger({
     format.splat(),
     format.json()
   ),
-  defaultMeta: { service: 'trello' },
   transports: [
-    new transports.Console({
-      level: 'info',
-      format: format.combine(format.colorize(), format.simple())
+    // new transports.Console(),
+    new transports.File({
+      filename: `${appRoot}/logs/error.log`,
+      level: 'error'
     }),
-    new transports.File({ filename: 'error.log', level: 'error' }),
-    new transports.File({ filename: 'combined.log' })
+    new transports.File({ filename: `${appRoot}/logs/combined.log` })
   ]
 })

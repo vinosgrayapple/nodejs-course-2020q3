@@ -9,14 +9,20 @@ const YAML = require('yamljs')
 const userRouter = require('./resources/users/user.router')
 const boardRouter = require('./resources/boards/board.router')
 const taskRouter = require('./resources/tasks/task.router')
-// const logMiddleware = require('./lib/winlogger')
+const logMiddleware = require('./lib/winlogger')
 const logger = require('./lib/logger')
 const app = express()
+
+process.on('uncaughtException', (error, origin) => {
+  logger.error(`captured error: ${error.message}`)
+})
+process.on('unhandledRejection', (reason, promise) => {
+  logger.error(`${reason.message}`)
+})
+
 const swaggerDocument = YAML.load(path.join(__dirname, '../doc/api.yaml'))
 app.use(express.json())
-morgan.token('body', req => `Body${JSON.stringify(req.body)}`)
-morgan.token('query', req => `Query${JSON.stringify(req.query)}`)
-app.use(morgan('[:date[clf]]  ":method :url" - :status - :body :query'))
+app.use(logMiddleware)
 
 app.use('/doc', swaggerUI.serve, swaggerUI.setup(swaggerDocument))
 app.use('/', (req, res, next) => {
@@ -31,6 +37,8 @@ app.use('/users', userRouter)
 app.use('/boards', boardRouter)
 boardRouter.use('/:boardId/tasks', taskRouter)
 
+Promise.reject(Error('Oops!'))
+
 app.use((err, req, res, next) => {
   if (err instanceof EntityValidationError) {
     logger.error(err.stack)
@@ -39,7 +47,8 @@ app.use((err, req, res, next) => {
   next(err)
 })
 app.use((err, req, res, _next) => {
-  logger.error(new Date(), err.message)
+  logger.error(err.message)
   res.status(INTERNAL_SERVER_ERROR).send(getStatusCode(INTERNAL_SERVER_ERROR))
 })
+
 module.exports = app

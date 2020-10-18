@@ -25,6 +25,8 @@ const removeUser = async id => {
 const updateUser = async (id, userNew) =>
   await db.users.update({ id }, { $set: userNew }, { returnUpdatedDocs: true })
 
+// throw Error('Oops!')
+
 // =======================BOARDS=======================================================
 const getAllBoards = async () => await db.boards.find({})
 const getBoard = async id => await db.boards.findOne({ id })

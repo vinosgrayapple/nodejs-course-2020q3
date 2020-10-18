@@ -1,5 +1,5 @@
 ### Get All users
-GET http://localhost:4000/boards
+GET http://localhost:4000/boards?hh=jj
 ### Get All users
 POST  http://localhost:4000/boards
 
