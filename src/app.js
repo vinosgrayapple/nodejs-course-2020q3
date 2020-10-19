@@ -2,14 +2,15 @@
 const express = require('express')
 const swaggerUI = require('swagger-ui-express')
 const path = require('path')
-const morgan = require('morgan')
 const YAML = require('yamljs')
+
 const userRouter = require('./resources/users/user.router')
 const boardRouter = require('./resources/boards/board.router')
 const taskRouter = require('./resources/tasks/task.router')
+const pexit = process.exit
 
 const { INTERNAL_SERVER_ERROR, getStatusCode } = require('http-status-codes')
-const { EntityValidationError, NotFoundError } = require('./lib/errors')
+const { NotFoundError } = require('./lib/errors')
 const logMiddleware = require('./lib/winlogger')
 const logger = require('./lib/logger')
 
@@ -17,15 +18,14 @@ const app = express()
 
 process
   .on('uncaughtException', error => {
-    console.error(
+    logger.error(
       `${new Date().toUTCString()} uncaughtException:`,
       error.message
     )
-    console.error(error.stack)
-    // process.exit(1)
+    pexit(1)
   })
   .on('unhandledRejection', (reason, promise) => {
-    console.error(`${reason.message}`)
+    logger.error(`${reason.message}`)
   })
 
 const swaggerDocument = YAML.load(path.join(__dirname, '../doc/api.yaml'))
@@ -45,12 +45,13 @@ app.use('/users', userRouter)
 app.use('/boards', boardRouter)
 boardRouter.use('/:boardId/tasks', taskRouter)
 
-// Promise.reject(Error('Oops!'))
+Promise.reject(Error('Oops!'))
 
 app.use((err, req, res, next) => {
   if (err instanceof NotFoundError) {
     logger.error(err.message)
     res.status(err.status).send(err.message)
+    return
   }
   next(err)
 })
