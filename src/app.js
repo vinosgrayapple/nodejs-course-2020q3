@@ -18,14 +18,11 @@ const app = express()
 
 process
   .on('uncaughtException', error => {
-    logger.error(
-      `${new Date().toUTCString()} uncaughtException:`,
-      error.message
-    )
-    pexit(1)
+    logger.error(error.message)
   })
   .on('unhandledRejection', (reason, promise) => {
     logger.error(`${reason.message}`)
+    pexit(1)
   })
 
 const swaggerDocument = YAML.load(path.join(__dirname, '../doc/api.yaml'))
@@ -45,8 +42,15 @@ app.use('/users', userRouter)
 app.use('/boards', boardRouter)
 boardRouter.use('/:boardId/tasks', taskRouter)
 
-Promise.reject(Error('Oops!'))
+// // check "uncaughtException" handler
+// setTimeout(() => {
+//   throw Error('Oops!')
+// }, 2000)
 
+// // check "unhandledRejection" handler
+// setTimeout(() => {
+//   Promise.reject(Error('OopsPromise!'))
+// }, 3000)
 app.use((err, req, res, next) => {
   if (err instanceof NotFoundError) {
     logger.error(err.message)
