@@ -32,7 +32,7 @@ app.use(logMiddleware)
 app.use('/doc', swaggerUI.serve, swaggerUI.setup(swaggerDocument))
 app.use('/', (req, res, next) => {
   if (req.originalUrl === '/') {
-    res.send('Service is running!')
+    res.send('Service is running!!!!')
     return
   }
   next()
