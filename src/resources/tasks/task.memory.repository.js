@@ -1,11 +1,13 @@
 const DB = require('../../common/inMemoryDB')
+const TASKS = 'tasks'
+const { NotFoundError } = require('../../lib/errors')
 
-const getAll = async boardId => DB.getAllTasks(boardId)
+const getAll = async boardId => DB.getAll(TASKS, boardId)
 
 const get = async id => {
   const task = await DB.getTask(id)
   if (!task) {
-    throw new Error(`Ой-ой! The task with id: ${id} was not found`)
+    throw new NotFoundError(`User with id: "${id}"  Not Found`)
   }
   return task
 }
