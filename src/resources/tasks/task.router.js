@@ -5,7 +5,6 @@ router.route('/').get(async (req, res) => {
   try {
     const { boardId } = req.params
     const tasks = await tasksService.getAll(boardId)
-    console.log('tasks: >> ', tasks)
     res.json(tasks)
   } catch (error) {
     res.status(404).send(error.message)

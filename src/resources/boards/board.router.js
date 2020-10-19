@@ -1,5 +1,6 @@
 const router = require('express').Router()
 // const Board = require('./board.model')
+// const { NotFoundError } = require('../../lib/errors')
 const boardsService = require('./board.service')
 // get All Boards
 router.route('/').get(async (req, res) => {
@@ -20,7 +21,6 @@ router.route('/:id').get(async (req, res) => {
   const { id } = req.params
   try {
     const board = await boardsService.get(id)
-    if (!board) throw new Error('Not Found')
     res.json(board)
   } catch (error) {
     res.status(404).send(error.message)

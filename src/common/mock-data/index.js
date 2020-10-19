@@ -71,7 +71,6 @@ async function start() {
     await db.boards
       .insert((await boardsData.build()).boards)
       .catch(err => console.error(err))
-
     const boards = await db.boards.find({})
     boards.forEach(async board => {
       db.tasks.insert([

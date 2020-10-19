@@ -5,7 +5,7 @@ const getAll = async () => DB.getAllBoards()
 const get = async id => {
   const board = await DB.getBoard(id)
   if (!board) {
-    throw new Error(`Ой-ой! The board with id: ${id} was not found`)
+    throw new Error(`The board with id: ${id} was not found`)
   }
   return board
 }

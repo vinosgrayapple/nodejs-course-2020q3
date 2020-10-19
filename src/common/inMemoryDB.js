@@ -1,4 +1,5 @@
 const { db } = require('./mock-data')
+const { NotFoundError } = require('../lib/errors')
 const User = require('../resources/users/user.model')
 const Board = require('../resources/boards/board.model')
 const Task = require('../resources/tasks/task.model')
@@ -23,10 +24,15 @@ const removeUser = async id => {
 }
 const updateUser = async (id, userNew) =>
   await db.users.update({ id }, { $set: userNew }, { returnUpdatedDocs: true })
-
 // =======================BOARDS=======================================================
 const getAllBoards = async () => await db.boards.find({})
-const getBoard = async id => await db.boards.findOne({ id })
+const getBoard = async id => {
+  const board = await db.boards.findOne({ id })
+  if (!board) {
+    throw new NotFoundError(`Couldn't find a Boards with id: >> "${id}"`)
+  }
+  return board
+}
 
 const createBoard = async board => {
   if (Object.keys(board).length === 0) {
