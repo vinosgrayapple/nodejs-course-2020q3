@@ -1,5 +1,5 @@
 ### Get users by ID
-GET http://localhost:4000/users/dgdfgfd7gf7g65x6g58x
+GET http://localhost:4000/users
 ### Get boards by id
 GET http://localhost:4000/boards/dgdfgfd7gf7g65x6g58x
 ### Get All users

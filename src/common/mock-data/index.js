@@ -1,7 +1,12 @@
 const mocker = require('mocker-data-generator').default
 const Datastore = require('nedb-promises')
 const Task = require('../../resources/tasks/task.model')
-
+const Users = require('../../resources/users/user.model')
+const users = [
+  new Users({ name: 'User1', login: 'admin', password: 'admin' }),
+  new Users({ name: 'User1', login: 'admin', password: 'admin' })
+]
+users.forEach(user => user.save())
 const db = {}
 db.users = Datastore.create(/* './db/users.db' */)
 db.boards = Datastore.create(/* './db/boards.db' */)
