@@ -2,7 +2,6 @@ const { db } = require('./mock-data')
 const User = require('../resources/users/user.model')
 const Board = require('../resources/boards/board.model')
 const Task = require('../resources/tasks/task.model')
-
 // =======================USERS=======================================================
 const getAll = async (entity, id = null) =>
   await db[entity].find({ boardId: id })
@@ -30,6 +29,9 @@ const getAllBoards = async () => await db.boards.find({})
 const getBoard = async id => await db.boards.findOne({ id })
 
 const createBoard = async board => {
+  if (Object.keys(board).length === 0) {
+    throw new Error('нет данных для создания Board')
+  }
   const newboard = new Board(board)
   await db.boards.insert(newboard)
   return newboard
@@ -49,10 +51,13 @@ const getAllTasks = async boardId => await db.tasks.find({ boardId })
 const getTask = async id => await db.tasks.findOne({ id })
 
 const createTask = async (boardId, task) => {
-  task.boardId = boardId
-  const newTask = new Task(task)
-  await db.tasks.insert(newTask)
-  return newTask
+  const board = await db.boards.findOne({ id: boardId })
+  if (!!board) {
+    task.boardId = boardId
+    const newTask = new Task(task)
+    await db.tasks.insert(newTask)
+    return newTask
+  }
 }
 const removeTask = async (boardId, id) => {
   await db.tasks.remove({ boardId, id })
@@ -60,6 +65,7 @@ const removeTask = async (boardId, id) => {
 const updateTask = async (id, taskNew) => {
   await db.tasks.update({ id }, { $set: taskNew }, { returnUpdatedDocs: true })
 }
+// =====================================================================
 module.exports = {
   getAll,
   getAllUsers,

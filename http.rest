@@ -1,5 +1,8 @@
 ### Get All users
-GET http://localhost:4000/boards/be444f5c-7d86-455f-92ee-ab99eb1b0a84
+
+GET http://localhost:4000/boards?hh=jj
+### Get All users
+POST  http://localhost:4000/boards
 
 ### Get All users
 GET http://localhost:4000/boards/be444f5c-7d86-455f-92ee-ab99eb1b0a84/tasks
@@ -42,7 +45,7 @@ GET http://localhost:4000/boards/b0df9d83-6c66-40ac-b711-9a79dbd649ad/tasks
 DELETE http://localhost:4000/users/b7aa978d-2e3d-4285-a73f-e4c59741a4f5
 
 ### Update
-PUT http://localhost:4000/boards/603bcbe2-e6ae-4bd8-841f-a798045a5471/tasks
+PUT http://localhost:4000/boards/603bcbe2-e6ae-4bd8-841f-a798045a5471/?tasks=2&hello=world
 content-type: application/json
 
 {

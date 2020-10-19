@@ -67,10 +67,10 @@ async function start() {
   if (!numUser) {
     await db.users
       .insert((await usersData.build()).users)
-      .catch(err => console.log(err))
+      .catch(err => console.error(err))
     await db.boards
       .insert((await boardsData.build()).boards)
-      .catch(err => console.log(err))
+      .catch(err => console.error(err))
 
     const boards = await db.boards.find({})
     boards.forEach(async board => {
@@ -83,6 +83,5 @@ async function start() {
       ])
     })
   }
-  // console.log("db['tasks'].find({})", await db['tasks'].find({}))
 }
 module.exports = { db, start }
