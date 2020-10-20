@@ -2,14 +2,15 @@
 const express = require('express')
 const swaggerUI = require('swagger-ui-express')
 const path = require('path')
-const morgan = require('morgan')
 const YAML = require('yamljs')
+
 const userRouter = require('./resources/users/user.router')
 const boardRouter = require('./resources/boards/board.router')
 const taskRouter = require('./resources/tasks/task.router')
+const pexit = process.exit
 
 const { INTERNAL_SERVER_ERROR, getStatusCode } = require('http-status-codes')
-const { EntityValidationError, NotFoundError } = require('./lib/errors')
+const { NotFoundError } = require('./lib/errors')
 const logMiddleware = require('./lib/winlogger')
 const logger = require('./lib/logger')
 
@@ -17,15 +18,11 @@ const app = express()
 
 process
   .on('uncaughtException', error => {
-    console.error(
-      `${new Date().toUTCString()} uncaughtException:`,
-      error.message
-    )
-    console.error(error.stack)
-    // process.exit(1)
+    logger.error(error.message)
   })
   .on('unhandledRejection', (reason, promise) => {
-    console.error(`${reason.message}`)
+    logger.error(`${reason.message}`)
+    pexit(1)
   })
 
 const swaggerDocument = YAML.load(path.join(__dirname, '../doc/api.yaml'))
@@ -35,7 +32,7 @@ app.use(logMiddleware)
 app.use('/doc', swaggerUI.serve, swaggerUI.setup(swaggerDocument))
 app.use('/', (req, res, next) => {
   if (req.originalUrl === '/') {
-    res.send('Service is running!')
+    res.send('Service is running!!!!')
     return
   }
   next()
@@ -45,12 +42,20 @@ app.use('/users', userRouter)
 app.use('/boards', boardRouter)
 boardRouter.use('/:boardId/tasks', taskRouter)
 
-// Promise.reject(Error('Oops!'))
+// // check "uncaughtException" handler
+// setTimeout(() => {
+//   throw Error('Oops!')
+// }, 2000)
 
+// // check "unhandledRejection" handler
+// setTimeout(() => {
+//   Promise.reject(Error('OopsPromise!'))
+// }, 3000)
 app.use((err, req, res, next) => {
   if (err instanceof NotFoundError) {
     logger.error(err.message)
     res.status(err.status).send(err.message)
+    return
   }
   next(err)
 })

@@ -11,7 +11,9 @@ module.exports = createLogger({
     format.json()
   ),
   transports: [
-    // new transports.Console(),
+    new transports.Console({
+      level: 'error'
+    }),
     new transports.File({
       filename: `${appRoot}/logs/error.log`,
       level: 'error'
