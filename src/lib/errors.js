@@ -1,10 +1,8 @@
 const logger = require('./logger')
-const { NOT_FOUND } = require('http-status-codes')
 class NotFoundError extends Error {
   constructor(message) {
     super(message)
-    this.message = message
-    this.status = NOT_FOUND
+    this.status = 404
   }
 }
 const catchErrors = func => async (req, res, next) => {
@@ -15,7 +13,12 @@ const catchErrors = func => async (req, res, next) => {
     return next(error)
   }
 }
+const catchDBErrors = func => (...params) =>
+  new Promise(func.call(this, ...params)).catch(error => {
+    throw new Error('error: ', error.message)
+  })
 module.exports = {
   NotFoundError,
-  catchErrors
+  catchErrors,
+  catchDBErrors
 }

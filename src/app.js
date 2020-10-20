@@ -3,6 +3,7 @@ const express = require('express')
 const swaggerUI = require('swagger-ui-express')
 const path = require('path')
 const YAML = require('yamljs')
+const createError = require('http-errors')
 
 const userRouter = require('./resources/users/user.router')
 const boardRouter = require('./resources/boards/board.router')
@@ -51,17 +52,37 @@ boardRouter.use('/:boardId/tasks', taskRouter)
 // setTimeout(() => {
 //   Promise.reject(Error('OopsPromise!'))
 // }, 3000)
-app.use((err, req, res, next) => {
-  if (err instanceof NotFoundError) {
-    logger.error(err.message)
-    res.status(err.status).send(err.message)
-    return
-  }
-  next(err)
+// app.use((err, req, res, next) => {
+//   console.log('First Error Handler test error: >>>>>>>>>>>>>>>>>>>>>>>>>')
+//   console.log(err instanceof NotFoundError)
+//   console.log(err.message)
+//   console.log(err.status)
+//   console.log('===========================================================')
+//   if (err instanceof NotFoundError) {
+//     console.log('test error: >>>>>>>>>>>>>>>>>>>>>>>>>')
+//     logger.error(err.message)
+//     res.status(err.status).send(err.message)
+//     return
+//   }
+//   next(err)
+// })
+// app.use((err, req, res, _next) => {
+//   logger.error(err.message)
+//   res.status(INTERNAL_SERVER_ERROR).send(getStatusCode(INTERNAL_SERVER_ERROR))
+// })
+app.use((req, res, next) => {
+  next(createError(404))
 })
-app.use((err, req, res, _next) => {
-  logger.error(err.message)
-  res.status(INTERNAL_SERVER_ERROR).send(getStatusCode(INTERNAL_SERVER_ERROR))
+app.use((err, req, res, next) => {
+  err.status = err.status || 500
+  const errObj = {
+    status: err.status,
+    message: err.message,
+    stack: err.stack
+  }
+  console.log('Error status: ', err.status)
+  logger.error(errObj)
+  res.status(err.status).json(errObj)
 })
 
 module.exports = app
