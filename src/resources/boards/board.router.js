@@ -1,6 +1,6 @@
 const router = require('express').Router()
 // const Board = require('./board.model')
-// const { NotFoundError } = require('../../lib/errors')
+// const { NotFoundError } = require('../../lib/errorgits')
 const boardsService = require('./board.service')
 // get All Boards
 router.route('/').get(async (req, res) => {
