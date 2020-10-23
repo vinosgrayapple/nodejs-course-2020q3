@@ -1,13 +1,13 @@
 ###
 GET http://localhost:4000/users
 ###
-POST http://localhost:4000/users
+PUT http://localhost:4000/users/1fdadac4-df69-459a-a80c-63f8dc753c4b
 Content-Type: application/json
 
 {
-  "name":"TEST_USER",
-  "login":"test_user",
-  "password":"T35t_P@55w0rd"
+  "name":"TEST_Pasha2233",
+  "login":"test_razinkov2332",
+  "password":"T35t_P@55w22330rd"
 }
 ### Get users by ID
 GET http://localhost:4000/users/28861758-85cf-4554-b292-fa232142fcae1

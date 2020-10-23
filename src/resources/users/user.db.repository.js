@@ -20,9 +20,11 @@ const get = asyncHandler(async id => {
 // Create User
 const create = asyncHandler(async user => await User.create(user))
 // Remove user
-const remove = async id => asyncHandler(await User.findByIdAndRemove(id))
+const remove = asyncHandler(async id => await User.findByIdAndRemove(id))
 // Update User
-const update = async (id, userNew) =>
-  asyncHandler(await User.findByIdAndUpdate(id, userNew))
+const update = asyncHandler(async (id, userNew) => {
+  await User.findByIdAndUpdate(id, userNew)
+  return get(id)
+})
 
 module.exports = { getAll, get, create, update, remove }

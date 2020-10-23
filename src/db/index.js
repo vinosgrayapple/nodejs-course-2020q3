@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+mongoose.set('useFindAndModify', false)
 const { MONGO_CONNECTION_STRING } = require('../common/config')
 const connectDB = cb => {
   mongoose.connect(MONGO_CONNECTION_STRING, {
