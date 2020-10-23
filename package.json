@@ -11,7 +11,7 @@
   "scripts": {
     "start": "nodemon src/server.js",
     "lint": "eslint ./ --ignore-path .gitignore --fix",
-    "test": "cross-env DEBUG=rs:* jest --testMatch \"<rootDir>/test/e2e/test/users.test.js\" --noStackTrace",
+    "test": "cross-env DEBUG=rs:* jest --testMatch \"<rootDir>/test/e2e/test/*.test.js\" --noStackTrace",
     "test:auth": "cross-env DEBUG=rs:* TEST_MODE=auth jest --noStackTrace"
   },
   "keywords": [
@@ -58,9 +58,11 @@
     "mocker-data-generator": "^2.9.0",
     "moment": "^2.29.1",
     "mongoose": "^5.10.9",
+    "mongoose-beautiful-unique-validation": "^7.1.1",
     "morgan": "^1.10.0",
     "nedb": "^1.8.0",
     "nedb-promises": "^4.1.0",
+    "normalize-mongoose": "0.0.1",
     "swagger-ui-express": "4.1.2",
     "uuid": "3.3.3",
     "winston": "^3.3.3",

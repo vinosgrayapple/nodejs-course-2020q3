@@ -1,11 +1,23 @@
-### Get users by ID
+###
 GET http://localhost:4000/users
+###
+POST http://localhost:4000/users
+Content-Type: application/json
+
+{
+  "name":"TEST_USER",
+  "login":"test_user",
+  "password":"T35t_P@55w0rd"
+}
+### Get users by ID
+GET http://localhost:4000/users/28861758-85cf-4554-b292-fa232142fcae1
 ### Get boards by id
 GET http://localhost:4000/boards/dgdfgfd7gf7g65x6g58x
 ### Get All users
 GET http://localhost:4000/tasks/dgdfgfd7gf7g65x6g58x
 ### Get All users
-POST  http://localhost:4000/boards
+GET  http://localhost:4000/boards/a8ae6337-ad6b-442c-bad9-101b264410c9
+
 
 ### Get All users
 GET http://localhost:4000/boards/be444f5c-7d86-455f-92ee-ab99eb1b0a84/tasks
@@ -13,7 +25,7 @@ GET http://localhost:4000/boards/be444f5c-7d86-455f-92ee-ab99eb1b0a84/tasks
 ###
 
 # curl -X POST "http://localhost:4000/boards/46259cdc-fd02-4c4f-b818-9c512e6e1a8f/tasks" -H "accept: application/json" -H "Content-Type: application/json" -d "{\"title\":\"string\",\"order\":0,\"description\":\"string\",\"userId\":\"string\",\"boardId\":\"string\",\"columnId\":\"string\"}"
-POST http://localhost:4000/boards/?hh=55
+POST http://localhost:4000/boards/111/tasks/111
 Content-Type: application/json
 
 {
@@ -26,4 +38,4 @@ Content-Type: application/json
 }
 
 ###
-http://localhost:3400/users/5f8eb543911d381f9434b0435
+DELETE http://localhost:3400/users/3e18df37-4d9d-4fc1-b84b-26c92eb3e9b8

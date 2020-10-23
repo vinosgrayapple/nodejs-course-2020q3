@@ -10,6 +10,9 @@ const connectDB = cb => {
   db.once('open', async () => {
     console.log('Connect to DB!')
     // await db.dropCollection('users')
+    /* await db
+      .collection('users')
+      .createIndex({ name: 1, login: 1 }, { unique: true }) */
     cb()
   })
 }

@@ -29,6 +29,7 @@ router.put(
   '/:id',
   catchErrors(async (req, res) => {
     const { id } = req.params
+    console.log('update')
     const updateForUser = req.body
 
     const userNew = await usersService.update(id, updateForUser)

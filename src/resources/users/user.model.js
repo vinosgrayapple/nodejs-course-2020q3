@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
+const { Schema } = mongoose
 const uuid = require('uuid')
-const userSchema = new mongoose.Schema({
+const userSchema = new Schema({
   _id: {
     type: String,
     default: uuid
