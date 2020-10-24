@@ -1,34 +1,17 @@
 const mongoose = require('mongoose')
 const { Schema } = mongoose
-const uuid = require('uuid')
+const normalize = require('normalize-mongoose')
+
 const boardSchema = new Schema({
-  _id: {
-    type: String,
-    default: uuid
-  },
   title: {
-    type: String
-  } /* ,
+    type: String,
+    required: true
+  },
   columns: {
     type: Array,
     default: []
-  } */
+  }
 })
+boardSchema.plugin(normalize)
 
 module.exports = mongoose.model('Board', boardSchema, 'boards')
-
-// const uuid = require('uuid')
-// const Columns = require('./column.model')
-// class Board {
-//   constructor({
-//     id = uuid(),
-//     title = 'BOARD',
-//     columns = [new Columns()]
-//   } = {}) {
-//     this.id = id
-//     this.title = title
-//     this.columns = columns
-//   }
-// }
-
-// module.exports = Board

@@ -2,13 +2,8 @@ const User = require('./user.model')
 const createError = require('http-errors')
 const asyncHandler = require('express-async-handler')
 
-const getAll = asyncHandler(async () => {
-  const users = await User.find({})
-  if (!users || users.length === 0) {
-    throw createError.NotFound('Users not found')
-  }
-  return users
-})
+const getAll = async () => User.find({})
+
 // Get User byId
 const get = asyncHandler(async id => {
   const user = await User.findById(id)

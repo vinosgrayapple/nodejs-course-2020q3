@@ -10,10 +10,8 @@ const connectDB = cb => {
   db.on('error', console.error.bind(console, 'connection error:'))
   db.once('open', async () => {
     console.log('Connect to DB!')
-    // await db.dropCollection('users')
-    /* await db
-      .collection('users')
-      .createIndex({ name: 1, login: 1 }, { unique: true }) */
+    db.dropDatabase('users')
+    // .createIndex({ name: 1, login: 1 }, { unique: true })
     cb()
   })
 }

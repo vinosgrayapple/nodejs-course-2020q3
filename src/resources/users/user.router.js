@@ -1,24 +1,27 @@
 const router = require('express').Router()
 const User = require('./user.model')
 const usersService = require('./user.service')
-const { catchErrors } = require('../../lib/errors')
+const createError = require('http-errors')
+const { OK, NOT_FOUND } = require('http-status-codes')
+const asyncHandler = require('express-async-handler')
+
 // get All Users
 router.route('/').get(
-  catchErrors(async (req, res) => {
+  asyncHandler(async (req, res) => {
     const users = await usersService.getAll()
-    res.json(users.map(User.toResponse))
+    res.status(OK).json(users.map(User.toResponse))
   })
 )
 // Create User
 router.route('/').post(
-  catchErrors(async (req, res) => {
+  asyncHandler(async (req, res) => {
     const user = await usersService.create(req.body)
     res.json(User.toResponse(user))
   })
 )
 // Get user by ID
 router.route('/:id').get(
-  catchErrors(async (req, res) => {
+  asyncHandler(async (req, res) => {
     const { id } = req.params
     const user = await usersService.get(id)
     res.json(User.toResponse(user))
@@ -27,7 +30,7 @@ router.route('/:id').get(
 // Update User by ID
 router.put(
   '/:id',
-  catchErrors(async (req, res) => {
+  asyncHandler(async (req, res) => {
     const { id } = req.params
     const updateForUser = req.body
 
@@ -38,10 +41,14 @@ router.put(
 // Delete User by ID
 router.delete(
   '/:id',
-  catchErrors(async (req, res) => {
+  asyncHandler(async (req, res) => {
     const { id } = req.params
-    await usersService.remove(id)
-    res.sendStatus(204)
+    const userIsReamoved = await usersService.remove(id)
+    if (userIsReamoved) {
+      res.status(204).send('User has been Deleted')
+    } else {
+      throw createError(NOT_FOUND, 'User for deletion not found')
+    }
   })
 )
 module.exports = router

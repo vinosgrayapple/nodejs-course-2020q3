@@ -1,11 +1,8 @@
 const mongoose = require('mongoose')
 const { Schema } = mongoose
-const uuid = require('uuid')
+const normalize = require('normalize-mongoose')
+
 const taskSchema = new Schema({
-  _id: {
-    type: String,
-    default: uuid
-  },
   title: {
     type: String,
     required: true
@@ -29,5 +26,6 @@ const taskSchema = new Schema({
     type: String
   }
 })
+taskSchema.plugin(normalize)
 
 module.exports = mongoose.model('Task', taskSchema, 'tasks')

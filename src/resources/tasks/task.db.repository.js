@@ -1,36 +1,34 @@
 const Task = require('./task.model')
-const createError = require('http-errors')
-const asyncHandler = require('express-async-handler')
 
-const getAll = asyncHandler(async () => {
-  const tasks = await Task.find({})
-  if (!tasks || tasks.length === 0) {
-    throw createError.NotFound('Tasks not found')
-  }
-  return tasks
-})
+// Get ALL Tasks
+const getAll = async boardId => Task.find({ boardId })
+
 // Get Task byId
-const get = asyncHandler(async id => {
-  const task = await Task.findById(id)
-  if (!task) {
-    throw createError.NotFound(`Task with id: ${id} not found`)
-  }
-  return task
-})
+const get = async ids => Task.findOne(ids)
+
 // Create Task
-const create = asyncHandler(async (boardId, task) => {
-  const taskCreate = { ...task, ...boardId }
-  await Task.create(taskCreate)
-})
+const create = async (boardId, task) => Task.create({ ...task, boardId })
+
 // remove Task
-const remove = asyncHandler(
-  async (boardId, id) => await Task.deleteOne({ boardId, _id: id })
-)
+const remove = async ids => Task.deleteOne(ids)
 
 // const create = async (boardId, task) => await Task.createTask(boardId, task)
-const update = asyncHandler(async (id, taskNew) => {
-  await Task.updateTask({ _id: id }, taskNew)
-  return await get(id)
-})
+const update = async (ids, taskNew) => {
+  await Task.updateOne(ids, taskNew)
+  return await get(ids)
+}
+// remove by board ID
+const removeByBoardId = async boardId => (await Task.deleteMany({ boardId })).ok
+// clear UserId after Delete User
+const clearUserIdAfterDelUser = async userId =>
+  (await Task.updateMany({ userId }, { userId: null })).ok
 
-module.exports = { getAll, get, create, update, remove }
+module.exports = {
+  getAll,
+  get,
+  create,
+  update,
+  remove,
+  removeByBoardId,
+  clearUserIdAfterDelUser
+}

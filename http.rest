@@ -1,5 +1,7 @@
 ###
-GET http://localhost:4000/users
+GET http://localhost:4000/boards/5f93d5ddb6fab66d0c0e83c5
+###
+GET http://localhost:4000/boards/undefined
 ###
 PUT http://localhost:4000/users/1fdadac4-df69-459a-a80c-63f8dc753c4b
 Content-Type: application/json
@@ -12,7 +14,7 @@ Content-Type: application/json
 ### Get users by ID
 GET http://localhost:4000/users/28861758-85cf-4554-b292-fa232142fcae1
 ### Get boards by id
-GET http://localhost:4000/boards/dgdfgfd7gf7g65x6g58x
+GET http://localhost:4000/boards/5f93d5ddb6fab66d0c0e83c5/tasks
 ### Get All users
 GET http://localhost:4000/tasks/dgdfgfd7gf7g65x6g58x
 ### Get All users
@@ -25,7 +27,7 @@ GET http://localhost:4000/boards/be444f5c-7d86-455f-92ee-ab99eb1b0a84/tasks
 ###
 
 # curl -X POST "http://localhost:4000/boards/46259cdc-fd02-4c4f-b818-9c512e6e1a8f/tasks" -H "accept: application/json" -H "Content-Type: application/json" -d "{\"title\":\"string\",\"order\":0,\"description\":\"string\",\"userId\":\"string\",\"boardId\":\"string\",\"columnId\":\"string\"}"
-POST http://localhost:4000/boards/111/tasks/111
+POST http://localhost:4000/boards/
 Content-Type: application/json
 
 {
