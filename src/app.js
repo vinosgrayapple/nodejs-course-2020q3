@@ -54,10 +54,10 @@ app.use((err, req, res, next) => {
     message: err.message,
     stack: err.stack
   }
-  console.log('============================== ')
-  console.log('Error status: ', err.status)
-  console.log('Error stack: \n', err.message.red)
-  console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ')
+  console.log('============================== '.red)
+  console.log('Error status: \n', err.status)
+  console.log('Error stack: \n', err.message)
+  console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> '.red)
 
   logger.error(errObj)
   res.status(err.status).json(errObj)
