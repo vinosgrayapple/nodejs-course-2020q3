@@ -1,25 +1,17 @@
 const User = require('./user.model')
-const createError = require('http-errors')
-const asyncHandler = require('express-async-handler')
 
+// Get All Users
 const getAll = async () => User.find({})
-
 // Get User byId
-const get = asyncHandler(async id => {
-  const user = await User.findById(id)
-  if (!user) {
-    throw createError.NotFound(`User with id: ${id} not found`)
-  }
-  return user
-})
+const get = async _id => User.findById(_id)
 // Create User
-const create = asyncHandler(async user => await User.create(user))
+const create = async user => User.create(user)
 // Remove user
-const remove = asyncHandler(async id => await User.findByIdAndRemove(id))
+const remove = async id => User.findByIdAndRemove(id)
 // Update User
-const update = asyncHandler(async (id, userNew) => {
-  await User.findByIdAndUpdate(id, userNew)
-  return get(id)
-})
+const update = async (_id, userNew) => {
+  await User.findByIdAndUpdate(_id, userNew)
+  return get(_id)
+}
 
 module.exports = { getAll, get, create, update, remove }

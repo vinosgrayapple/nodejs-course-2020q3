@@ -4,13 +4,14 @@ const swaggerUI = require('swagger-ui-express')
 const path = require('path')
 const YAML = require('yamljs')
 const createError = require('http-errors')
+const { INTERNAL_SERVER_ERROR, getStatusCode } = require('http-status-codes')
+require('colors')
 
 const userRouter = require('./resources/users/user.router')
 const boardRouter = require('./resources/boards/board.router')
 const taskRouter = require('./resources/tasks/task.router')
 const pexit = process.exit
 
-const { INTERNAL_SERVER_ERROR, getStatusCode } = require('http-status-codes')
 const { NotFoundError } = require('./lib/errors')
 const logMiddleware = require('./lib/winlogger')
 const logger = require('./lib/logger')
@@ -43,33 +44,6 @@ app.use('/users', userRouter)
 app.use('/boards', boardRouter)
 boardRouter.use('/:boardId/tasks', taskRouter)
 
-// // check "uncaughtException" handler
-// setTimeout(() => {
-//   throw Error('Oops!')
-// }, 2000)
-
-// // check "unhandledRejection" handler
-// setTimeout(() => {
-//   Promise.reject(Error('OopsPromise!'))
-// }, 3000)
-// app.use((err, req, res, next) => {
-//   console.log('First Error Handler test error: >>>>>>>>>>>>>>>>>>>>>>>>>')
-//   console.log(err instanceof NotFoundError)
-//   console.log(err.message)
-//   console.log(err.status)
-//   console.log('===========================================================')
-//   if (err instanceof NotFoundError) {
-//     console.log('test error: >>>>>>>>>>>>>>>>>>>>>>>>>')
-//     logger.error(err.message)
-//     res.status(err.status).send(err.message)
-//     return
-//   }
-//   next(err)
-// })
-// app.use((err, req, res, _next) => {
-//   logger.error(err.message)
-//   res.status(INTERNAL_SERVER_ERROR).send(getStatusCode(INTERNAL_SERVER_ERROR))
-// })
 app.use((req, res, next) => {
   next(createError(404))
 })
@@ -80,9 +54,22 @@ app.use((err, req, res, next) => {
     message: err.message,
     stack: err.stack
   }
+  console.log('============================== ')
   console.log('Error status: ', err.status)
+  console.log('Error stack: \n', err.message.red)
+  console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ')
+
   logger.error(errObj)
   res.status(err.status).json(errObj)
 })
 
 module.exports = app
+// // check "uncaughtException" handler
+// setTimeout(() => {
+//   throw Error('Oops!')
+// }, 2000)
+
+// // check "unhandledRejection" handler
+// setTimeout(() => {
+//   Promise.reject(Error('OopsPromise!'))
+// }, 3000)

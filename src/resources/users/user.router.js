@@ -2,7 +2,7 @@ const router = require('express').Router()
 const User = require('./user.model')
 const usersService = require('./user.service')
 const createError = require('http-errors')
-const { OK, NOT_FOUND } = require('http-status-codes')
+const { OK, NOT_FOUND, NO_CONTENT } = require('http-status-codes')
 const asyncHandler = require('express-async-handler')
 
 // get All Users
@@ -24,28 +24,28 @@ router.route('/:id').get(
   asyncHandler(async (req, res) => {
     const { id } = req.params
     const user = await usersService.get(id)
+    if (!user) {
+      throw createError.NotFound(`User with id: ${id} not found`)
+    }
     res.json(User.toResponse(user))
   })
 )
 // Update User by ID
-router.put(
-  '/:id',
+router.route('/:id').put(
   asyncHandler(async (req, res) => {
     const { id } = req.params
     const updateForUser = req.body
-
     const userNew = await usersService.update(id, updateForUser)
     res.json(User.toResponse(userNew))
   })
 )
 // Delete User by ID
-router.delete(
-  '/:id',
+router.route('/:id').delete(
   asyncHandler(async (req, res) => {
     const { id } = req.params
     const userIsReamoved = await usersService.remove(id)
     if (userIsReamoved) {
-      res.status(204).send('User has been Deleted')
+      res.status(NO_CONTENT).send('User has been Deleted')
     } else {
       throw createError(NOT_FOUND, 'User for deletion not found')
     }

@@ -9,7 +9,6 @@ router.route('/').get(
   asyncHandler(async (req, res) => {
     const { boardId } = req.params
     const tasks = await tasksService.getAll(boardId)
-
     res.json(tasks)
   })
 )
