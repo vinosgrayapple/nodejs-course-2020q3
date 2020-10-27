@@ -17,3 +17,19 @@
 2020-10-27T22:31:39.884Z [🔥🔥🔥] error: undefined listen EADDRINUSE: address already in use :::4000
 2020-10-27T22:32:15.854Z [🔥🔥🔥] error: undefined listen EADDRINUSE: address already in use :::4000
 2020-10-27T22:32:15.869Z [🔥🔥🔥] error: undefined listen EADDRINUSE: address already in use :::4000
+2020-10-27T22:40:57.819Z [🔥🔥🔥] error: undefined listen EADDRINUSE: address already in use :::4000
+2020-10-27T22:40:57.824Z [🔥🔥🔥] error: undefined listen EADDRINUSE: address already in use :::4000
+2020-10-27T22:41:20.495Z [🔥🔥🔥] error: undefined listen EADDRINUSE: address already in use :::4000
+2020-10-27T22:41:20.499Z [🔥🔥🔥] error: undefined listen EADDRINUSE: address already in use :::4000
+2020-10-27T22:41:52.431Z [🔥🔥🔥] error: undefined listen EADDRINUSE: address already in use :::4000
+2020-10-27T22:41:52.442Z [🔥🔥🔥] error: undefined listen EADDRINUSE: address already in use :::4000
+2020-10-27T22:42:21.715Z [🔥🔥🔥] error: undefined listen EADDRINUSE: address already in use :::4000
+2020-10-27T22:42:21.720Z [🔥🔥🔥] error: undefined listen EADDRINUSE: address already in use :::4000
+2020-10-27T22:42:36.760Z [🔥🔥🔥] error: undefined listen EADDRINUSE: address already in use :::4000
+2020-10-27T22:43:00.452Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f98a273c3cbc505176e7ef3","boardId":"5f98a273c3cbc505176e7ef2"} not found
+2020-10-27T22:43:00.632Z [🔥🔥🔥] error: 404 Board with id: 5f98a274c3cbc505176e7efb not found
+2020-10-27T22:43:01.171Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f98a274c3cbc505176e7f00","boardId":"5f98a274c3cbc505176e7efd"} not found
+2020-10-27T22:43:01.175Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f98a274c3cbc505176e7f02","boardId":"5f98a274c3cbc505176e7efd"} not found
+2020-10-27T22:43:01.176Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f98a274c3cbc505176e7f01","boardId":"5f98a274c3cbc505176e7efd"} not found
+2020-10-27T22:43:01.177Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f98a274c3cbc505176e7eff","boardId":"5f98a274c3cbc505176e7efd"} not found
+2020-10-27T22:43:01.178Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f98a274c3cbc505176e7f03","boardId":"5f98a274c3cbc505176e7efd"} not found
