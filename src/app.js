@@ -4,7 +4,7 @@ const swaggerUI = require('swagger-ui-express')
 const path = require('path')
 const YAML = require('yamljs')
 const createError = require('http-errors')
-const { INTERNAL_SERVER_ERROR, getStatusCode } = require('http-status-codes')
+const { INTERNAL_SERVER_ERROR, NOT_FOUND } = require('http-status-codes')
 require('colors')
 
 const userRouter = require('./resources/users/user.router')
@@ -44,10 +44,10 @@ app.use('/boards', boardRouter)
 boardRouter.use('/:boardId/tasks', taskRouter)
 
 app.use((req, res, next) => {
-  next(createError(404))
+  next(createError(NOT_FOUND))
 })
 app.use((err, req, res, next) => {
-  err.status = err.status || 500
+  err.status = err.status || INTERNAL_SERVER_ERROR
   const errObj = {
     status: err.status,
     message: err.message,
