@@ -33,3 +33,5 @@
 2020-10-27T22:43:01.176Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f98a274c3cbc505176e7f01","boardId":"5f98a274c3cbc505176e7efd"} not found
 2020-10-27T22:43:01.177Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f98a274c3cbc505176e7eff","boardId":"5f98a274c3cbc505176e7efd"} not found
 2020-10-27T22:43:01.178Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f98a274c3cbc505176e7f03","boardId":"5f98a274c3cbc505176e7efd"} not found
+2020-10-27T22:51:03.892Z [🔥🔥🔥] error: undefined listen EADDRINUSE: address already in use :::4000
+2020-10-27T22:51:03.893Z [🔥🔥🔥] error: undefined listen EADDRINUSE: address already in use :::4000
