@@ -1,23 +1,31 @@
-const uuid = require('uuid')
+const mongoose = require('mongoose')
+const { Schema } = mongoose
+const normalize = require('normalize-mongoose')
 
-class Task {
-  constructor({
-    id = uuid(),
-    title = 'Finish Course NodeJS',
-    order = 0,
-    description = 'work!work!work!',
-    userId = null, // assignee
-    boardId = null,
-    columnId = null
-  } = {}) {
-    this.id = id
-    this.title = title
-    this.order = order
-    this.description = description
-    this.userId = userId
-    this.boardId = boardId
-    this.columnId = columnId
+const taskSchema = new Schema({
+  title: {
+    type: String,
+    required: true
+  },
+  order: {
+    type: Number,
+    required: true,
+    default: 0
+  },
+  description: {
+    type: String,
+    required: true
+  },
+  userId: {
+    type: String
+  },
+  boardId: {
+    type: String
+  },
+  columnId: {
+    type: String
   }
-}
+})
+taskSchema.plugin(normalize)
 
-module.exports = Task
+module.exports = mongoose.model('Task', taskSchema, 'tasks')

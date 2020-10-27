@@ -1,32 +1,37 @@
 const router = require('express').Router()
-const { catchErrors } = require('../../lib/errors')
 const boardsService = require('./board.service')
+const createError = require('http-errors')
+const asyncHandler = require('express-async-handler')
+
 // get All Boards
 router.route('/').get(
-  catchErrors(async (req, res) => {
+  asyncHandler(async (req, res) => {
     const boards = await boardsService.getAll()
     res.json(boards)
   })
 )
 // Create Boards
 router.route('/').post(
-  catchErrors(async (req, res) => {
+  asyncHandler(async (req, res) => {
     const board = await boardsService.create(req.body)
-    res.status(200).send(board)
+    res.send(board)
   })
 )
 // Get Boards by ID
 router.route('/:id').get(
-  catchErrors(async (req, res) => {
+  asyncHandler(async (req, res) => {
     const { id } = req.params
     const board = await boardsService.get(id)
+    if (!board) {
+      throw createError.NotFound(`Board with id: ${id} not found`)
+    }
     res.json(board)
   })
 )
 // Update User by ID
 router.put(
   '/:id',
-  catchErrors(async (req, res) => {
+  asyncHandler(async (req, res) => {
     const { id } = req.params
     const updateForBoard = req.body
     const boardNew = await boardsService.update(id, updateForBoard)
@@ -36,10 +41,13 @@ router.put(
 // Delete board by ID
 router.delete(
   '/:id',
-  catchErrors(async (req, res) => {
+  asyncHandler(async (req, res) => {
     const { id } = req.params
-    await boardsService.remove(id)
-    res.sendStatus(200)
+    if (await boardsService.remove(id)) {
+      res.sendStatus(200)
+    } else {
+      throw createError(404, 'Board not found')
+    }
   })
 )
 module.exports = router
