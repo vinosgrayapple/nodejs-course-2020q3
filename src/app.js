@@ -12,9 +12,7 @@ const boardRouter = require('./resources/boards/board.router')
 const taskRouter = require('./resources/tasks/task.router')
 const pexit = process.exit
 
-const { NotFoundError } = require('./lib/errors')
-const logMiddleware = require('./lib/winlogger')
-const logger = require('./lib/logger')
+const { morganColorLog, morganLogToFile, logger } = require('./lib/mlog')
 
 const app = express()
 
@@ -29,7 +27,8 @@ process
 
 const swaggerDocument = YAML.load(path.join(__dirname, '../doc/api.yaml'))
 app.use(express.json())
-app.use(logMiddleware)
+app.use(morganColorLog)
+app.use(morganLogToFile)
 
 app.use('/doc', swaggerUI.serve, swaggerUI.setup(swaggerDocument))
 app.use('/', (req, res, next) => {
@@ -54,11 +53,6 @@ app.use((err, req, res, next) => {
     message: err.message,
     stack: err.stack
   }
-  console.log('============================== '.red)
-  console.log('Error status: \n', err.status)
-  console.log('Error stack: \n', err.message)
-  console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> '.red)
-
   logger.error(errObj)
   res.status(err.status).json(errObj)
 })

@@ -63,6 +63,7 @@
     "nedb": "^1.8.0",
     "nedb-promises": "^4.1.0",
     "normalize-mongoose": "0.0.1",
+    "rotating-file-stream": "^2.1.3",
     "swagger-ui-express": "4.1.2",
     "uuid": "3.3.3",
     "winston": "^3.3.3",
