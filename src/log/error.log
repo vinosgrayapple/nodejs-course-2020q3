@@ -1,0 +1,13 @@
+2020-10-27T22:23:31.252Z [🔥🔥🔥 ] error: undefined listen EADDRINUSE: address already in use :::4000
+2020-10-27T22:23:31.301Z [🔥🔥🔥 ] error: undefined listen EADDRINUSE: address already in use :::4000
+2020-10-27T22:23:31.332Z [🔥🔥🔥 ] error: undefined listen EADDRINUSE: address already in use :::4000
+2020-10-27T22:23:45.509Z [🔥🔥🔥 ] error: 404 Task with id: {"_id":"5f989df03efb0d7cce3f91ee","boardId":"5f989df03efb0d7cce3f91ec"} not found
+2020-10-27T22:23:45.684Z [🔥🔥🔥 ] error: 404 Board with id: 5f989df13efb0d7cce3f91f5 not found
+2020-10-27T22:23:46.185Z [🔥🔥🔥 ] error: 404 Task with id: {"_id":"5f989df13efb0d7cce3f91fc","boardId":"5f989df13efb0d7cce3f91f7"} not found
+2020-10-27T22:23:46.190Z [🔥🔥🔥 ] error: 404 Task with id: {"_id":"5f989df13efb0d7cce3f91f9","boardId":"5f989df13efb0d7cce3f91f7"} not found
+2020-10-27T22:23:46.191Z [🔥🔥🔥 ] error: 404 Task with id: {"_id":"5f989df13efb0d7cce3f91fa","boardId":"5f989df13efb0d7cce3f91f7"} not found
+2020-10-27T22:23:46.193Z [🔥🔥🔥 ] error: 404 Task with id: {"_id":"5f989df13efb0d7cce3f91fb","boardId":"5f989df13efb0d7cce3f91f7"} not found
+2020-10-27T22:23:46.197Z [🔥🔥🔥 ] error: 404 Task with id: {"_id":"5f989df13efb0d7cce3f91fd","boardId":"5f989df13efb0d7cce3f91f7"} not found
+2020-10-27T22:24:29.672Z [🔥🔥🔥] error: undefined listen EADDRINUSE: address already in use :::4000
+2020-10-27T22:24:29.711Z [🔥🔥🔥] error: undefined listen EADDRINUSE: address already in use :::4000
+2020-10-27T22:24:29.723Z [🔥🔥🔥] error: undefined listen EADDRINUSE: address already in use :::4000

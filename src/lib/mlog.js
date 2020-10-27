@@ -6,14 +6,20 @@ const path = require('path')
 const winston = require('winston')
 const { createLogger, format, transports } = winston
 const { combine, timestamp, label, printf } = format
-const printFormat = printf(({ level, message, labels, timestamps, status }) => {
-  return `${timestamps} [${labels}] ${level}: ${status} ${message}`
-})
+const printFormat = printf(
+  ({ level, message, label: labels, timestamp: timestamps, status }) => {
+    return `${timestamps} [${labels}] ${level}: ${status} ${message}`
+  }
+)
 const logger = createLogger({
-  format: combine(label({ label: '🔥🔥🔥 ' }), timestamp(), printFormat),
+  format: combine(label({ label: '🔥🔥🔥' }), timestamp(), printFormat),
   transports: [
     new transports.Console({
       format: format.colorize()
+    }),
+    new transports.File({
+      level: 'error',
+      filename: path.join(__dirname, '..', 'log', 'error.log')
     })
   ]
 })
