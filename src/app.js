@@ -1,14 +1,23 @@
 /* eslint-disable no-unused-vars */
 const express = require('express')
 const swaggerUI = require('swagger-ui-express')
+const jwt = require('jsonwebtoken')
 const path = require('path')
+const helmet = require('helmet')
+const cors = require('cors')
 const YAML = require('yamljs')
 const createError = require('http-errors')
-const { INTERNAL_SERVER_ERROR, NOT_FOUND } = require('http-status-codes')
+const {
+  INTERNAL_SERVER_ERROR,
+  NOT_FOUND,
+  UNAUTHORIZED,
+  FORBIDDEN
+} = require('http-status-codes')
 
 const userRouter = require('./resources/users/user.router')
 const boardRouter = require('./resources/boards/board.router')
 const taskRouter = require('./resources/tasks/task.router')
+const loginRouter = require('./resources/login/login.router')
 
 const { morganColorLog, morganLogToFile, logger } = require('./lib/mlog')
 
@@ -25,6 +34,8 @@ process
   })
 
 const swaggerDocument = YAML.load(path.join(__dirname, '../doc/api.yaml'))
+app.use(helmet())
+app.use(cors())
 app.use(express.json())
 app.use(morganColorLog)
 app.use(morganLogToFile)
@@ -37,9 +48,9 @@ app.use('/', (req, res, next) => {
   }
   next()
 })
-
-app.use('/users', userRouter)
-app.use('/boards', boardRouter)
+app.use('/login', loginRouter)
+app.use('/users', authenticateToken, userRouter)
+app.use('/boards', authenticateToken, boardRouter)
 boardRouter.use('/:boardId/tasks', taskRouter)
 
 app.use((req, res, next) => {
@@ -57,6 +68,20 @@ app.use((err, req, res, next) => {
 })
 
 module.exports = app
+//
+function authenticateToken(req, res, next) {
+  const authHeader = req.headers.authorization
+  const token = authHeader && authHeader.split(' ')[1]
+  if (token === null) return res.sendStatus(UNAUTHORIZED)
+
+  jwt.verify(token, process.env.JWT_SECRET_KEY, (err, user) => {
+    // console.log(err)
+    if (err) return res.sendStatus(UNAUTHORIZED)
+    req.user = user
+    next()
+  })
+}
+//
 // @
 // @
 // @

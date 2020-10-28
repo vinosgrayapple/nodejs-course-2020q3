@@ -35,3 +35,266 @@
 2020-10-27T22:43:01.178Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f98a274c3cbc505176e7f03","boardId":"5f98a274c3cbc505176e7efd"} not found
 2020-10-27T22:51:03.892Z [🔥🔥🔥] error: undefined listen EADDRINUSE: address already in use :::4000
 2020-10-27T22:51:03.893Z [🔥🔥🔥] error: undefined listen EADDRINUSE: address already in use :::4000
+2020-10-28T07:23:19.220Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f991c667c11e91805a7b17d","boardId":"5f991c657c11e91805a7b17b"} not found
+2020-10-28T07:23:19.472Z [🔥🔥🔥] error: 404 Board with id: 5f991c677c11e91805a7b185 not found
+2020-10-28T07:23:20.012Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f991c677c11e91805a7b18b","boardId":"5f991c677c11e91805a7b187"} not found
+2020-10-28T07:23:20.014Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f991c677c11e91805a7b18d","boardId":"5f991c677c11e91805a7b187"} not found
+2020-10-28T07:23:20.016Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f991c677c11e91805a7b18c","boardId":"5f991c677c11e91805a7b187"} not found
+2020-10-28T07:23:20.018Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f991c677c11e91805a7b189","boardId":"5f991c677c11e91805a7b187"} not found
+2020-10-28T07:23:20.019Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f991c677c11e91805a7b18a","boardId":"5f991c677c11e91805a7b187"} not found
+2020-10-28T07:26:14.361Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Board"
+2020-10-28T07:26:14.906Z [🔥🔥🔥] error: 500 Update Board
+2020-10-28T07:26:14.912Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Board"
+2020-10-28T07:26:16.903Z [🔥🔥🔥] error: 404 Not Found
+2020-10-28T07:26:17.075Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "123" at path "_id" for model "User"
+2020-10-28T07:26:17.150Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Task"
+2020-10-28T07:26:17.339Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "User"
+2020-10-28T07:26:17.345Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "User"
+2020-10-28T07:26:17.439Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Task"
+2020-10-28T07:26:17.445Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Task"
+2020-10-28T07:26:17.851Z [🔥🔥🔥] error: 404 Not Found
+2020-10-28T07:26:17.991Z [🔥🔥🔥] error: 404 Not Found
+2020-10-28T07:26:19.102Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f991d1a67310c1a3e939eb1","boardId":"5f991d1a67310c1a3e939eb0"} not found
+2020-10-28T07:26:19.173Z [🔥🔥🔥] error: 404 Board with id: 5f991d1a67310c1a3e939ebb not found
+2020-10-28T07:26:19.662Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f991d1b67310c1a3e939ebd","boardId":"5f991d1b67310c1a3e939ebc"} not found
+2020-10-28T07:26:19.664Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f991d1b67310c1a3e939ebe","boardId":"5f991d1b67310c1a3e939ebc"} not found
+2020-10-28T07:26:19.666Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f991d1b67310c1a3e939ebf","boardId":"5f991d1b67310c1a3e939ebc"} not found
+2020-10-28T07:26:19.668Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f991d1b67310c1a3e939ec0","boardId":"5f991d1b67310c1a3e939ebc"} not found
+2020-10-28T07:26:19.669Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f991d1b67310c1a3e939ec1","boardId":"5f991d1b67310c1a3e939ebc"} not found
+2020-10-28T07:27:10.980Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Task"
+2020-10-28T07:27:10.992Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Board"
+2020-10-28T07:27:10.994Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "123" at path "_id" for model "User"
+2020-10-28T07:27:11.069Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Task"
+2020-10-28T07:27:11.081Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Task"
+2020-10-28T07:27:11.085Z [🔥🔥🔥] error: 500 Update Board
+2020-10-28T07:27:11.087Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "User"
+2020-10-28T07:27:11.094Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Board"
+2020-10-28T07:27:11.096Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "User"
+2020-10-28T07:27:11.602Z [🔥🔥🔥] error: 404 Not Found
+2020-10-28T07:27:11.606Z [🔥🔥🔥] error: 404 Not Found
+2020-10-28T07:27:11.608Z [🔥🔥🔥] error: 404 Not Found
+2020-10-28T07:27:12.717Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f991d4f67310c1a3e939ec8","boardId":"5f991d4f67310c1a3e939ec6"} not found
+2020-10-28T07:27:12.937Z [🔥🔥🔥] error: 404 Board with id: 5f991d5067310c1a3e939ecf not found
+2020-10-28T07:27:13.466Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f991d5167310c1a3e939ed3","boardId":"5f991d5067310c1a3e939ed1"} not found
+2020-10-28T07:27:13.468Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f991d5167310c1a3e939ed4","boardId":"5f991d5067310c1a3e939ed1"} not found
+2020-10-28T07:27:13.469Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f991d5167310c1a3e939ed5","boardId":"5f991d5067310c1a3e939ed1"} not found
+2020-10-28T07:27:13.470Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f991d5167310c1a3e939ed6","boardId":"5f991d5067310c1a3e939ed1"} not found
+2020-10-28T07:27:13.472Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f991d5167310c1a3e939ed7","boardId":"5f991d5067310c1a3e939ed1"} not found
+2020-10-28T10:46:46.906Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Board"
+2020-10-28T10:46:47.054Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Task"
+2020-10-28T10:46:47.143Z [🔥🔥🔥] error: 500 Update Board
+2020-10-28T10:46:47.150Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Board"
+2020-10-28T10:46:47.246Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Task"
+2020-10-28T10:46:47.252Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Task"
+2020-10-28T10:46:47.353Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "123" at path "_id" for model "User"
+2020-10-28T10:46:47.367Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:46:47.374Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "User"
+2020-10-28T10:46:47.380Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "User"
+2020-10-28T10:46:48.113Z [🔥🔥🔥] error: 404 Not Found
+2020-10-28T10:46:48.222Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:46:48.264Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:46:48.281Z [🔥🔥🔥] error: 404 Not Found
+2020-10-28T10:46:48.284Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:46:48.293Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "undefined" at path "_id" for model "User"
+2020-10-28T10:46:48.302Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:46:48.314Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "undefined" at path "_id" for model "User"
+2020-10-28T10:46:48.333Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:46:48.467Z [🔥🔥🔥] error: 404 Not Found
+2020-10-28T10:46:49.627Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994c18388b9d23b5960e26","boardId":"5f994c18388b9d23b5960e25"} not found
+2020-10-28T10:46:49.683Z [🔥🔥🔥] error: 404 Board with id: 5f994c19388b9d23b5960e2b not found
+2020-10-28T10:46:50.208Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994c19388b9d23b5960e2d","boardId":"5f994c19388b9d23b5960e2c"} not found
+2020-10-28T10:46:50.211Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994c19388b9d23b5960e2f","boardId":"5f994c19388b9d23b5960e2c"} not found
+2020-10-28T10:46:50.215Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994c19388b9d23b5960e2e","boardId":"5f994c19388b9d23b5960e2c"} not found
+2020-10-28T10:46:50.219Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994c19388b9d23b5960e31","boardId":"5f994c19388b9d23b5960e2c"} not found
+2020-10-28T10:46:50.220Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994c19388b9d23b5960e30","boardId":"5f994c19388b9d23b5960e2c"} not found
+2020-10-28T10:47:09.050Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:47:09.062Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:47:09.070Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:47:09.075Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "undefined" at path "_id" for model "User"
+2020-10-28T10:47:09.083Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:47:09.086Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "undefined" at path "_id" for model "User"
+2020-10-28T10:47:09.098Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:47:10.329Z [🔥🔥🔥] error: 404 Board with id: 5f994c2e388b9d23b5960e3c not found
+2020-10-28T10:47:10.822Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994c2e388b9d23b5960e40","boardId":"5f994c2e388b9d23b5960e3f"} not found
+2020-10-28T10:47:10.824Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994c2e388b9d23b5960e42","boardId":"5f994c2e388b9d23b5960e3f"} not found
+2020-10-28T10:47:10.825Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994c2e388b9d23b5960e41","boardId":"5f994c2e388b9d23b5960e3f"} not found
+2020-10-28T10:47:10.827Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994c2e388b9d23b5960e44","boardId":"5f994c2e388b9d23b5960e3f"} not found
+2020-10-28T10:47:10.828Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994c2e388b9d23b5960e43","boardId":"5f994c2e388b9d23b5960e3f"} not found
+2020-10-28T10:47:10.833Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994c2d388b9d23b5960e3b","boardId":"5f994c2d388b9d23b5960e3a"} not found
+2020-10-28T10:48:38.845Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:48:38.869Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:48:38.876Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:48:38.885Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "undefined" at path "_id" for model "User"
+2020-10-28T10:48:38.892Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:48:38.897Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "undefined" at path "_id" for model "User"
+2020-10-28T10:48:38.910Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:48:40.082Z [🔥🔥🔥] error: 404 Board with id: 5f994c8770084024a5a791fe not found
+2020-10-28T10:48:40.825Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994c8870084024a5a79202","boardId":"5f994c8870084024a5a79200"} not found
+2020-10-28T10:48:40.827Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994c8870084024a5a79203","boardId":"5f994c8870084024a5a79200"} not found
+2020-10-28T10:48:40.828Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994c8870084024a5a79205","boardId":"5f994c8870084024a5a79200"} not found
+2020-10-28T10:48:40.830Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994c8870084024a5a79204","boardId":"5f994c8870084024a5a79200"} not found
+2020-10-28T10:48:40.832Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994c8870084024a5a79206","boardId":"5f994c8870084024a5a79200"} not found
+2020-10-28T10:48:40.840Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994c8770084024a5a791fd","boardId":"5f994c8770084024a5a791fc"} not found
+2020-10-28T10:49:04.941Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:49:04.956Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:49:04.961Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:49:04.969Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "undefined" at path "_id" for model "User"
+2020-10-28T10:49:04.975Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:49:04.979Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "undefined" at path "_id" for model "User"
+2020-10-28T10:49:04.991Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:49:06.182Z [🔥🔥🔥] error: 404 Board with id: 5f994ca1b39fa7251a827442 not found
+2020-10-28T10:49:06.886Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994ca2b39fa7251a827445","boardId":"5f994ca2b39fa7251a827443"} not found
+2020-10-28T10:49:06.888Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994ca2b39fa7251a827446","boardId":"5f994ca2b39fa7251a827443"} not found
+2020-10-28T10:49:06.890Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994ca2b39fa7251a827448","boardId":"5f994ca2b39fa7251a827443"} not found
+2020-10-28T10:49:06.892Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994ca2b39fa7251a827447","boardId":"5f994ca2b39fa7251a827443"} not found
+2020-10-28T10:49:06.893Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994ca2b39fa7251a827449","boardId":"5f994ca2b39fa7251a827443"} not found
+2020-10-28T10:49:07.101Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994ca1b39fa7251a827441","boardId":"5f994ca1b39fa7251a827440"} not found
+2020-10-28T10:51:48.353Z [🔥🔥🔥] error: 404 Board with id: 5f994d446ebbc325cb4ba9da not found
+2020-10-28T10:51:48.480Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994d436ebbc325cb4ba9d4","boardId":"5f994d436ebbc325cb4ba9d2"} not found
+2020-10-28T10:51:48.874Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994d446ebbc325cb4ba9de","boardId":"5f994d446ebbc325cb4ba9dc"} not found
+2020-10-28T10:51:48.879Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994d446ebbc325cb4ba9e0","boardId":"5f994d446ebbc325cb4ba9dc"} not found
+2020-10-28T10:51:48.881Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994d446ebbc325cb4ba9e1","boardId":"5f994d446ebbc325cb4ba9dc"} not found
+2020-10-28T10:51:48.882Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994d446ebbc325cb4ba9df","boardId":"5f994d446ebbc325cb4ba9dc"} not found
+2020-10-28T10:51:48.884Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994d446ebbc325cb4ba9e2","boardId":"5f994d446ebbc325cb4ba9dc"} not found
+2020-10-28T10:54:04.610Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:54:04.629Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:54:04.635Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:54:04.642Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "undefined" at path "_id" for model "User"
+2020-10-28T10:54:04.650Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:54:04.654Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "undefined" at path "_id" for model "User"
+2020-10-28T10:54:04.666Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:54:05.856Z [🔥🔥🔥] error: 404 Board with id: 5f994dcd13b24c26767afed1 not found
+2020-10-28T10:54:06.384Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994dcd13b24c26767afecf","boardId":"5f994dcd13b24c26767afecd"} not found
+2020-10-28T10:54:06.554Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994dcd13b24c26767afed4","boardId":"5f994dcd13b24c26767afed3"} not found
+2020-10-28T10:54:06.556Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994dcd13b24c26767afed5","boardId":"5f994dcd13b24c26767afed3"} not found
+2020-10-28T10:54:06.558Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994dcd13b24c26767afed7","boardId":"5f994dcd13b24c26767afed3"} not found
+2020-10-28T10:54:06.559Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994dcd13b24c26767afed6","boardId":"5f994dcd13b24c26767afed3"} not found
+2020-10-28T10:54:06.560Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994dcd13b24c26767afed8","boardId":"5f994dcd13b24c26767afed3"} not found
+2020-10-28T10:54:47.902Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:54:47.916Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:54:47.922Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:54:47.926Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "undefined" at path "_id" for model "User"
+2020-10-28T10:54:47.932Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:54:47.935Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "undefined" at path "_id" for model "User"
+2020-10-28T10:54:47.946Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:54:49.161Z [🔥🔥🔥] error: 404 Board with id: 5f994df813b24c26767afee3 not found
+2020-10-28T10:54:49.650Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994df913b24c26767afee7","boardId":"5f994df913b24c26767afee6"} not found
+2020-10-28T10:54:49.653Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994df913b24c26767afee9","boardId":"5f994df913b24c26767afee6"} not found
+2020-10-28T10:54:49.654Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994df913b24c26767afeea","boardId":"5f994df913b24c26767afee6"} not found
+2020-10-28T10:54:49.655Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994df913b24c26767afeeb","boardId":"5f994df913b24c26767afee6"} not found
+2020-10-28T10:54:49.657Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994df913b24c26767afee8","boardId":"5f994df913b24c26767afee6"} not found
+2020-10-28T10:54:49.663Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994df813b24c26767afee2","boardId":"5f994df813b24c26767afee1"} not found
+2020-10-28T10:56:56.358Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:56:56.374Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:56:56.381Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:56:56.390Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "undefined" at path "_id" for model "User"
+2020-10-28T10:57:22.278Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:57:22.291Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:57:22.295Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994e91b5c71027e84bc8bd","boardId":"5f994e90b5c71027e84bc8bb"} not found
+2020-10-28T10:57:22.299Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:57:22.307Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "undefined" at path "_id" for model "User"
+2020-10-28T10:57:22.314Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:57:22.319Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "undefined" at path "_id" for model "User"
+2020-10-28T10:57:22.331Z [🔥🔥🔥] error: 500 rounds must be a number
+2020-10-28T10:57:22.543Z [🔥🔥🔥] error: 404 Board with id: 5f994e92b5c71027e84bc8c2 not found
+2020-10-28T10:57:23.034Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994e92b5c71027e84bc8ca","boardId":"5f994e92b5c71027e84bc8c8"} not found
+2020-10-28T10:57:23.036Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994e92b5c71027e84bc8c9","boardId":"5f994e92b5c71027e84bc8c8"} not found
+2020-10-28T10:57:23.038Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994e92b5c71027e84bc8cd","boardId":"5f994e92b5c71027e84bc8c8"} not found
+2020-10-28T10:57:23.039Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994e92b5c71027e84bc8cb","boardId":"5f994e92b5c71027e84bc8c8"} not found
+2020-10-28T10:57:23.041Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994e92b5c71027e84bc8cc","boardId":"5f994e92b5c71027e84bc8c8"} not found
+2020-10-28T10:58:10.386Z [🔥🔥🔥] error: 404 Board with id: 5f994ec2ea581c28528d1758 not found
+2020-10-28T10:58:10.916Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994ec2ea581c28528d175d","boardId":"5f994ec2ea581c28528d175c"} not found
+2020-10-28T10:58:10.918Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994ec2ea581c28528d175e","boardId":"5f994ec2ea581c28528d175c"} not found
+2020-10-28T10:58:10.919Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994ec2ea581c28528d175f","boardId":"5f994ec2ea581c28528d175c"} not found
+2020-10-28T10:58:10.956Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994ec2ea581c28528d1760","boardId":"5f994ec2ea581c28528d175c"} not found
+2020-10-28T10:58:10.958Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994ec2ea581c28528d1761","boardId":"5f994ec2ea581c28528d175c"} not found
+2020-10-28T10:58:10.965Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f994ec1ea581c28528d1757","boardId":"5f994ec1ea581c28528d1756"} not found
+2020-10-28T10:59:07.615Z [🔥🔥🔥] error: 404 Not Found
+2020-10-28T11:04:36.757Z [🔥🔥🔥] error: undefined User.cb is not a function
+2020-10-28T11:04:42.931Z [🔥🔥🔥] error: undefined User.cb is not a function
+2020-10-28T11:04:54.725Z [🔥🔥🔥] error: undefined User validation failed: password: Path `password` is required., login: Path `login` is required., name: Path `name` is required.
+2020-10-28T11:05:31.920Z [🔥🔥🔥] error: undefined admin is not defined
+2020-10-28T11:07:23.365Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Board"
+2020-10-28T11:07:23.524Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "123" at path "_id" for model "User"
+2020-10-28T11:07:23.600Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Task"
+2020-10-28T11:07:23.692Z [🔥🔥🔥] error: 500 Update Board
+2020-10-28T11:07:23.697Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Board"
+2020-10-28T11:07:23.784Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "User"
+2020-10-28T11:07:23.792Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "User"
+2020-10-28T11:07:23.832Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Task"
+2020-10-28T11:07:23.849Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Task"
+2020-10-28T11:07:24.275Z [🔥🔥🔥] error: 404 Not Found
+2020-10-28T11:07:24.348Z [🔥🔥🔥] error: 404 Not Found
+2020-10-28T11:07:24.409Z [🔥🔥🔥] error: 404 Not Found
+2020-10-28T11:07:25.585Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f9950eca991cc299f224184","boardId":"5f9950eca991cc299f224183"} not found
+2020-10-28T11:07:25.736Z [🔥🔥🔥] error: 404 Board with id: 5f9950eda991cc299f22418b not found
+2020-10-28T11:07:26.243Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f9950eda991cc299f22418e","boardId":"5f9950eda991cc299f22418d"} not found
+2020-10-28T11:07:26.245Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f9950eda991cc299f22418f","boardId":"5f9950eda991cc299f22418d"} not found
+2020-10-28T11:07:26.246Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f9950eda991cc299f224190","boardId":"5f9950eda991cc299f22418d"} not found
+2020-10-28T11:07:26.248Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f9950eda991cc299f224192","boardId":"5f9950eda991cc299f22418d"} not found
+2020-10-28T11:07:26.249Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f9950eda991cc299f224191","boardId":"5f9950eda991cc299f22418d"} not found
+2020-10-28T11:29:03.367Z [🔥🔥🔥] error: 400 Unexpected token n in JSON at position 1
+2020-10-28T11:52:07.339Z [🔥🔥🔥] error: 500 usersRepo.get is not a function
+2020-10-28T11:54:38.780Z [🔥🔥🔥] error: 500 usersRepo.get is not a function TypeError: usersRepo.get is not a function
+    at Object.validate (/mnt/f/_code-project_/nodejs-course-2020q3/src/resources/login/login.service.js:2:36)
+    at /mnt/f/_code-project_/nodejs-course-2020q3/src/resources/login/login.router.js:10:35
+    at asyncUtilWrap (/mnt/f/_code-project_/nodejs-course-2020q3/node_modules/express-async-handler/index.js:3:20)
+    at Layer.handle [as handle_request] (/mnt/f/_code-project_/nodejs-course-2020q3/node_modules/express/lib/router/layer.js:95:5)
+    at next (/mnt/f/_code-project_/nodejs-course-2020q3/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/mnt/f/_code-project_/nodejs-course-2020q3/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/mnt/f/_code-project_/nodejs-course-2020q3/node_modules/express/lib/router/layer.js:95:5)
+    at /mnt/f/_code-project_/nodejs-course-2020q3/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/mnt/f/_code-project_/nodejs-course-2020q3/node_modules/express/lib/router/index.js:335:12)
+    at next (/mnt/f/_code-project_/nodejs-course-2020q3/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/mnt/f/_code-project_/nodejs-course-2020q3/node_modules/express/lib/router/index.js:174:3)
+    at router (/mnt/f/_code-project_/nodejs-course-2020q3/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/mnt/f/_code-project_/nodejs-course-2020q3/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/mnt/f/_code-project_/nodejs-course-2020q3/node_modules/express/lib/router/index.js:317:13)
+    at /mnt/f/_code-project_/nodejs-course-2020q3/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/mnt/f/_code-project_/nodejs-course-2020q3/node_modules/express/lib/router/index.js:335:12)
+2020-10-28T11:55:17.529Z [🔥🔥🔥] error: undefined Cannot read property 'comparePassword' of null undefined
+2020-10-28T11:57:09.012Z [🔥🔥🔥] error: undefined Cannot read property 'comparePassword' of null undefined
+2020-10-28T11:58:13.673Z [🔥🔥🔥] error: undefined Cannot read property 'comparePassword' of null undefined
+2020-10-28T12:01:04.266Z [🔥🔥🔥] error: undefined v is not defined undefined
+2020-10-28T12:01:36.965Z [🔥🔥🔥] error: undefined Cannot read property 'comparePassword' of null undefined
+2020-10-28T12:02:08.484Z [🔥🔥🔥] error: undefined cb is not a function undefined
+2020-10-28T12:47:20.250Z [🔥🔥🔥] error: 404 Board with id: 5f93d5ddb6fab66d0c0e83c5 not found NotFoundError: Board with id: 5f93d5ddb6fab66d0c0e83c5 not found
+    at /mnt/f/_code-project_/nodejs-course-2020q3/src/resources/boards/board.router.js:26:25
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at runNextTicks (internal/process/task_queues.js:62:3)
+    at processImmediate (internal/timers.js:434:9)
+2020-10-28T12:48:04.828Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "1fdadac4-df69-459a-a80c-63f8dc753c4b" at path "_id" for model "User" CastError: Cast to ObjectId failed for value "1fdadac4-df69-459a-a80c-63f8dc753c4b" at path "_id" for model "User"
+    at model.Query.exec (/mnt/f/_code-project_/nodejs-course-2020q3/node_modules/mongoose/lib/query.js:4380:21)
+    at model.Query.Query.then (/mnt/f/_code-project_/nodejs-course-2020q3/node_modules/mongoose/lib/query.js:4472:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+2020-10-28T12:49:01.992Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "28861758-85cf-4554-b292-fa232142fcae1" at path "_id" for model "User" CastError: Cast to ObjectId failed for value "28861758-85cf-4554-b292-fa232142fcae1" at path "_id" for model "User"
+    at model.Query.exec (/mnt/f/_code-project_/nodejs-course-2020q3/node_modules/mongoose/lib/query.js:4380:21)
+    at model.Query.Query.then (/mnt/f/_code-project_/nodejs-course-2020q3/node_modules/mongoose/lib/query.js:4472:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+2020-10-28T12:49:01.995Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "28861758-85cf-4554-b292-fa232142fcae1" at path "_id" for model "User" CastError: Cast to ObjectId failed for value "28861758-85cf-4554-b292-fa232142fcae1" at path "_id" for model "User"
+    at model.Query.exec (/mnt/f/_code-project_/nodejs-course-2020q3/node_modules/mongoose/lib/query.js:4380:21)
+    at model.Query.Query.then (/mnt/f/_code-project_/nodejs-course-2020q3/node_modules/mongoose/lib/query.js:4472:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+2020-10-28T12:50:12.910Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "1fdadac4-df69-459a-a80c-63f8dc753c4b" at path "_id" for model "User" CastError: Cast to ObjectId failed for value "1fdadac4-df69-459a-a80c-63f8dc753c4b" at path "_id" for model "User"
+    at model.Query.exec (/mnt/f/_code-project_/nodejs-course-2020q3/node_modules/mongoose/lib/query.js:4380:21)
+    at model.Query.Query.then (/mnt/f/_code-project_/nodejs-course-2020q3/node_modules/mongoose/lib/query.js:4472:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+2020-10-28T12:53:44.504Z [🔥🔥🔥] error: 404 User with id: 1fdadac4-df69-459a-a80c-63f8dc753c4b!! NOT FOUND NotFoundError: User with id: 1fdadac4-df69-459a-a80c-63f8dc753c4b!! NOT FOUND
+    at Object.update (/mnt/f/_code-project_/nodejs-course-2020q3/src/resources/users/user.db.repository.js:18:11)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async /mnt/f/_code-project_/nodejs-course-2020q3/src/resources/users/user.router.js:38:21
+2020-10-28T12:55:09.042Z [🔥🔥🔥] error: 404 User with id: 1fdadac4-df69-459a-a80c-63f8dc753c4b!! NOT FOUND
+2020-10-28T13:02:25.378Z [🔥🔥🔥] error: 500 Cannot read property 'password' of null
+2020-10-28T13:04:13.358Z [🔥🔥🔥] error: 403 Forbidden
+2020-10-28T13:07:24.118Z [🔥🔥🔥] error: 500 createError.FORBIDDEN is not a function
+2020-10-28T13:07:59.822Z [🔥🔥🔥] error: 403 Forbidden for admin0
+2020-10-28T13:08:14.508Z [🔥🔥🔥] error: 403 Forbidden for admin
+2020-10-28T13:09:50.623Z [🔥🔥🔥] error: 403 Forbidden, invalid login or password
+2020-10-28T13:29:22.235Z [🔥🔥🔥] error: 404 Not Found
+2020-10-28T13:34:13.673Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f99735489d86137dcf9b730","boardId":"5f99735489d86137dcf9b72e"} not found
+2020-10-28T13:34:13.830Z [🔥🔥🔥] error: 404 Board with id: 5f99735589d86137dcf9b737 not found
+2020-10-28T13:34:14.415Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f99735589d86137dcf9b73a","boardId":"5f99735589d86137dcf9b739"} not found
+2020-10-28T13:34:14.417Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f99735589d86137dcf9b73b","boardId":"5f99735589d86137dcf9b739"} not found
+2020-10-28T13:34:14.418Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f99735589d86137dcf9b73c","boardId":"5f99735589d86137dcf9b739"} not found
+2020-10-28T13:34:14.421Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f99735589d86137dcf9b73d","boardId":"5f99735589d86137dcf9b739"} not found
+2020-10-28T13:34:14.422Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f99735589d86137dcf9b73e","boardId":"5f99735589d86137dcf9b739"} not found

@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const User = require('../resources/users/user.model')
 mongoose.set('useFindAndModify', false)
 const { MONGO_CONNECTION_STRING } = require('../common/config')
 const connectDB = cb => {
@@ -11,6 +12,7 @@ const connectDB = cb => {
   db.once('open', async () => {
     console.log('Connect to DB!')
     db.dropDatabase('task4')
+    User.create({ name: 'admin', login: 'admin', password: 'admin' })
     cb()
   })
 }

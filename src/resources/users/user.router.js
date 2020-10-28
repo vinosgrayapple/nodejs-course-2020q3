@@ -36,6 +36,9 @@ router.route('/:id').put(
     const { id } = req.params
     const updateForUser = req.body
     const userNew = await usersService.update(id, updateForUser)
+    if (!userNew) {
+      throw createError.NotFound(`User with id: ${id} not found`)
+    }
     res.json(User.toResponse(userNew))
   })
 )

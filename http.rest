@@ -1,7 +1,25 @@
 ###
-GET http://localhost:4000/boards/5f93d5ddb6fab66d0c0e83c5
+POST  http://localhost:4000/login
+Content-Type: application/json
+
+{
+  "login":"admin",
+  "password":"admin"
+}
+###
+GET http://localhost:4000/boards/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6ImFkbWluIiwiX2lkIjoiNWY5OTcxNjJmNTA0NjgzNzY4Yjk5NGY1IiwiaWF0IjoxNjAzODkxNTYyLCJleHAiOjE2MDM4OTUxNjJ9.0t2H2Nn3_n-4pioCcIvmveNBOZJ0PermAFzfp_i45_g
 ###
 GET http://localhost:4000/boards/undefined
+###
+POST http://localhost:4000/users/
+Content-Type: application/json
+
+{
+  "name":"admin",
+  "login":"admin",
+  "password":"T35t_P@55w22330rd"
+}
 ###
 PUT http://localhost:4000/users/1fdadac4-df69-459a-a80c-63f8dc753c4b
 Content-Type: application/json

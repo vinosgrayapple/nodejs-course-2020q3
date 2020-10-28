@@ -7,8 +7,14 @@ const winston = require('winston')
 const { createLogger, format, transports } = winston
 const { combine, timestamp, label, printf } = format
 const printFormat = printf(
-  ({ level, message, label: labels, timestamp: timestamps, status }) => {
-    return `${timestamps} [${labels}] ${level}: ${status} ${message}`
+  ({
+    level,
+    message,
+    /* stack, */ label: labels,
+    timestamp: timestamps,
+    status
+  }) => {
+    return `${timestamps} [${labels}] ${level}: ${status} ${message}` /* ${stack} `*/
   }
 )
 const logger = createLogger({
