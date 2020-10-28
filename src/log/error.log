@@ -298,3 +298,11 @@
 2020-10-28T13:34:14.418Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f99735589d86137dcf9b73c","boardId":"5f99735589d86137dcf9b739"} not found
 2020-10-28T13:34:14.421Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f99735589d86137dcf9b73d","boardId":"5f99735589d86137dcf9b739"} not found
 2020-10-28T13:34:14.422Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f99735589d86137dcf9b73e","boardId":"5f99735589d86137dcf9b739"} not found
+2020-10-28T14:42:21.658Z [🔥🔥🔥] error: 404 Board with id: 5f99834de0652642ae27d271 not found
+2020-10-28T14:42:22.167Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f99834de0652642ae27d276","boardId":"5f99834de0652642ae27d274"} not found
+2020-10-28T14:42:22.171Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f99834de0652642ae27d275","boardId":"5f99834de0652642ae27d274"} not found
+2020-10-28T14:42:22.174Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f99834de0652642ae27d278","boardId":"5f99834de0652642ae27d274"} not found
+2020-10-28T14:42:22.176Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f99834de0652642ae27d277","boardId":"5f99834de0652642ae27d274"} not found
+2020-10-28T14:42:22.178Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f99834de0652642ae27d279","boardId":"5f99834de0652642ae27d274"} not found
+2020-10-28T14:42:22.337Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f99834de0652642ae27d270","boardId":"5f99834de0652642ae27d26f"} not found
+2020-10-28T14:59:02.826Z [🔥🔥🔥] error: 404 Not Found
