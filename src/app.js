@@ -10,8 +10,7 @@ const createError = require('http-errors')
 const {
   INTERNAL_SERVER_ERROR,
   NOT_FOUND,
-  UNAUTHORIZED,
-  FORBIDDEN
+  UNAUTHORIZED
 } = require('http-status-codes')
 
 const userRouter = require('./resources/users/user.router')

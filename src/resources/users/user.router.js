@@ -4,7 +4,10 @@ const usersService = require('./user.service')
 const createError = require('http-errors')
 const { OK, NOT_FOUND, NO_CONTENT } = require('http-status-codes')
 const asyncHandler = require('express-async-handler')
-
+const {
+  validateUserData,
+  validUserDataForUpdate
+} = require('../../lib/validation')
 // get All Users
 router.route('/').get(
   asyncHandler(async (req, res) => {
@@ -14,6 +17,7 @@ router.route('/').get(
 )
 // Create User
 router.route('/').post(
+  validateUserData,
   asyncHandler(async (req, res) => {
     const user = await usersService.create(req.body)
     res.json(User.toResponse(user))
@@ -32,6 +36,7 @@ router.route('/:id').get(
 )
 // Update User by ID
 router.route('/:id').put(
+  validUserDataForUpdate,
   asyncHandler(async (req, res) => {
     const { id } = req.params
     const updateForUser = req.body
