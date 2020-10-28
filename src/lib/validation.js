@@ -19,13 +19,6 @@ function validUserDataForUpdate(req, res, next) {
     password: Joi.string().empty('')
   }
 
-  // // only admins can update role
-  // if (req.user.role === 'Admin') {
-  //   schemaRules.role = Joi.string()
-  //     .valid('Admin', 'User')
-  //     .empty('')
-  // }
-
   const schema = Joi.object(schemaRules)
   validateRequest(req, next, schema)
 }
