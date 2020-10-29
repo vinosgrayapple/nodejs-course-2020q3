@@ -1,38 +1,45 @@
-2020-10-29T10:45:56.954Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f9a9d636ef9a3099320a3f8","boardId":"5f9a9d636ef9a3099320a3f7"} not found
-2020-10-29T10:45:57.174Z [🔥🔥🔥] error: 404 Board with id: 5f9a9d646ef9a3099320a400 not found
-2020-10-29T10:45:57.845Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f9a9d656ef9a3099320a405","boardId":"5f9a9d656ef9a3099320a401"} not found
-2020-10-29T10:45:57.848Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f9a9d656ef9a3099320a404","boardId":"5f9a9d656ef9a3099320a401"} not found
-2020-10-29T10:45:57.850Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f9a9d656ef9a3099320a402","boardId":"5f9a9d656ef9a3099320a401"} not found
-2020-10-29T10:45:57.851Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f9a9d656ef9a3099320a406","boardId":"5f9a9d656ef9a3099320a401"} not found
-2020-10-29T10:45:57.852Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f9a9d656ef9a3099320a403","boardId":"5f9a9d656ef9a3099320a401"} not found
-2020-10-29T11:58:21.593Z [🔥🔥🔥] error: 403 No authorization data
-2020-10-29T12:02:19.942Z [🔥🔥🔥] error: 403 No authorization data
-2020-10-29T12:02:54.239Z [🔥🔥🔥] error: 403 No authorization data
-2020-10-29T12:03:16.293Z [🔥🔥🔥] error: 403 No authorization data
-2020-10-29T12:09:30.496Z [🔥🔥🔥] error: 401 Token invalid!
-2020-10-29T12:10:25.653Z [🔥🔥🔥] error: 401 Token invalid!
-2020-10-29T12:10:38.511Z [🔥🔥🔥] error: 401 Token invalid!
-2020-10-29T12:10:55.841Z [🔥🔥🔥] error: 401 Token invalid!
-2020-10-29T12:11:30.332Z [🔥🔥🔥] error: 403 No authorization data
-2020-10-29T12:11:44.207Z [🔥🔥🔥] error: 401 Token invalid!
-2020-10-29T12:12:00.379Z [🔥🔥🔥] error: 401 Token invalid!
-2020-10-29T12:12:15.147Z [🔥🔥🔥] error: 404 Not Found
-2020-10-29T12:12:24.271Z [🔥🔥🔥] error: 404 Not Found
-2020-10-29T12:12:29.118Z [🔥🔥🔥] error: 401 Token invalid!
-2020-10-29T12:15:32.011Z [🔥🔥🔥] error: 401 Token invalid!
-2020-10-29T12:15:45.794Z [🔥🔥🔥] error: 401 Token invalid!
-2020-10-29T12:16:18.986Z [🔥🔥🔥] error: 401 Token invalid!
-2020-10-29T12:16:43.574Z [🔥🔥🔥] error: 401 Token invalid!
-2020-10-29T12:16:44.802Z [🔥🔥🔥] error: 401 Token invalid!
-2020-10-29T12:17:03.695Z [🔥🔥🔥] error: 401 Token invalid!
-2020-10-29T12:17:21.825Z [🔥🔥🔥] error: 401 Token invalid!
-2020-10-29T12:20:09.762Z [🔥🔥🔥] error: 401 Token invalid!
-2020-10-29T12:21:22.562Z [🔥🔥🔥] error: 401 Token invalid!
-2020-10-29T12:21:59.953Z [🔥🔥🔥] error: 401 Token invalid!
-2020-10-29T12:22:28.036Z [🔥🔥🔥] error: 404 Not Found
-2020-10-29T12:22:40.334Z [🔥🔥🔥] error: 418 Validation error: "login" is required, "password" is required
-2020-10-29T12:23:24.526Z [🔥🔥🔥] error: 418 Validation error: "name" is required, "password" length must be at least 6 characters long
-2020-10-29T12:23:43.798Z [🔥🔥🔥] error: 418 Validation error: "login" is required, "password" length must be at least 6 characters long
-2020-10-29T12:24:28.765Z [🔥🔥🔥] error: 418 Validation error: "password" length must be at least 6 characters long
-2020-10-29T12:28:23.103Z [🔥🔥🔥] error: 403 No authorization data
-2020-10-29T12:29:47.680Z [🔥🔥🔥] error: 401 Token invalid!
+2020-10-29T12:52:44.724Z [🔥🔥🔥] error: undefined logger is not defined
+2020-10-29T13:04:34.969Z [🔥🔥🔥] [31merror[39m: 404 Task with id: {"_id":"5f9abde12e7b0012651f715c","boardId":"5f9abde12e7b0012651f715a"} not found
+2020-10-29T13:04:35.127Z [🔥🔥🔥] [31merror[39m: 404 Board with id: 5f9abde22e7b0012651f7163 not found
+2020-10-29T13:04:35.755Z [🔥🔥🔥] [31merror[39m: 401 Token invalid!
+2020-10-29T13:04:35.761Z [🔥🔥🔥] [31merror[39m: 401 Token invalid!
+2020-10-29T13:04:35.764Z [🔥🔥🔥] [31merror[39m: 401 Token invalid!
+2020-10-29T13:04:35.768Z [🔥🔥🔥] [31merror[39m: 401 Token invalid!
+2020-10-29T13:04:35.772Z [🔥🔥🔥] [31merror[39m: 401 Token invalid!
+2020-10-29T13:04:35.784Z [🔥🔥🔥] [31merror[39m: 404 Task with id: {"_id":"5f9abde32e7b0012651f7167","boardId":"5f9abde32e7b0012651f7165"} not found
+2020-10-29T13:04:35.786Z [🔥🔥🔥] [31merror[39m: 404 Task with id: {"_id":"5f9abde32e7b0012651f7166","boardId":"5f9abde32e7b0012651f7165"} not found
+2020-10-29T13:04:35.797Z [🔥🔥🔥] [31merror[39m: 404 Task with id: {"_id":"5f9abde32e7b0012651f716a","boardId":"5f9abde32e7b0012651f7165"} not found
+2020-10-29T13:04:35.799Z [🔥🔥🔥] [31merror[39m: 404 Task with id: {"_id":"5f9abde32e7b0012651f7168","boardId":"5f9abde32e7b0012651f7165"} not found
+2020-10-29T13:04:35.801Z [🔥🔥🔥] [31merror[39m: 404 Task with id: {"_id":"5f9abde32e7b0012651f7169","boardId":"5f9abde32e7b0012651f7165"} not found
+2020-10-29T13:04:36.286Z [🔥🔥🔥] [31merror[39m: 401 Token invalid!
+2020-10-29T13:04:36.292Z [🔥🔥🔥] [31merror[39m: 401 Token invalid!
+2020-10-29T13:04:36.295Z [🔥🔥🔥] [31merror[39m: 401 Token invalid!
+2020-10-29T13:04:36.299Z [🔥🔥🔥] [31merror[39m: 401 Token invalid!
+2020-10-29T13:04:36.302Z [🔥🔥🔥] [31merror[39m: 401 Token invalid!
+2020-10-29T13:04:36.505Z [🔥🔥🔥] [31merror[39m: 401 Token invalid!
+2020-10-29T13:04:36.511Z [🔥🔥🔥] [31merror[39m: 401 Token invalid!
+2020-10-29T13:04:36.515Z [🔥🔥🔥] [31merror[39m: 401 Token invalid!
+2020-10-29T13:04:36.519Z [🔥🔥🔥] [31merror[39m: 401 Token invalid!
+2020-10-29T13:04:36.523Z [🔥🔥🔥] [31merror[39m: 401 Token invalid!
+2020-10-29T13:07:05.865Z [¯_(ツ)_/¯] [31merror[39m: 404 Task with id: {"_id":"5f9abe78086b9313c81c5210","boardId":"5f9abe78086b9313c81c520e"} not found
+2020-10-29T13:07:06.024Z [¯_(ツ)_/¯] [31merror[39m: 404 Board with id: 5f9abe79086b9313c81c5217 not found
+2020-10-29T13:07:06.497Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-10-29T13:07:06.501Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-10-29T13:07:06.507Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-10-29T13:07:06.511Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-10-29T13:07:06.514Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-10-29T13:07:06.522Z [¯_(ツ)_/¯] [31merror[39m: 404 Task with id: {"_id":"5f9abe7a086b9313c81c521a","boardId":"5f9abe7a086b9313c81c5219"} not found
+2020-10-29T13:07:06.525Z [¯_(ツ)_/¯] [31merror[39m: 404 Task with id: {"_id":"5f9abe7a086b9313c81c521d","boardId":"5f9abe7a086b9313c81c5219"} not found
+2020-10-29T13:07:06.528Z [¯_(ツ)_/¯] [31merror[39m: 404 Task with id: {"_id":"5f9abe7a086b9313c81c521b","boardId":"5f9abe7a086b9313c81c5219"} not found
+2020-10-29T13:07:06.529Z [¯_(ツ)_/¯] [31merror[39m: 404 Task with id: {"_id":"5f9abe7a086b9313c81c521c","boardId":"5f9abe7a086b9313c81c5219"} not found
+2020-10-29T13:07:06.531Z [¯_(ツ)_/¯] [31merror[39m: 404 Task with id: {"_id":"5f9abe7a086b9313c81c521e","boardId":"5f9abe7a086b9313c81c5219"} not found
+2020-10-29T13:07:06.958Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-10-29T13:07:06.963Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-10-29T13:07:06.967Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-10-29T13:07:06.970Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-10-29T13:07:06.973Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-10-29T13:07:07.147Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-10-29T13:07:07.151Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-10-29T13:07:07.155Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-10-29T13:07:07.159Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-10-29T13:07:07.162Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!

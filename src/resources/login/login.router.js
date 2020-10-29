@@ -7,7 +7,6 @@ const { FORBIDDEN } = require('http-status-codes')
 router.route('/').post(
   asyncHandler(async (req, res) => {
     const { login, password } = req.body
-    console.log({ login, password })
     if (!login || !password) {
       throw createError(FORBIDDEN, 'No authorization data')
     }

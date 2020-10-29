@@ -5,17 +5,23 @@ const rfs = require('rotating-file-stream')
 const path = require('path')
 const winston = require('winston')
 const { createLogger, format, transports } = winston
-const { combine, timestamp, label, printf } = format
+const { combine, timestamp, label, printf, colorize } = format
 const printFormat = printf(
   ({ level, message, label: labels, timestamp: timestamps, status }) => {
-    return `${timestamps} [${labels}] ${level}: ${status} ${message}`
+    return `${timestamps} [${labels}] ${level || ''}: ${status ||
+      ''} ${message}`
   }
 )
 const logger = createLogger({
-  format: combine(label({ label: '🔥🔥🔥' }), timestamp(), printFormat),
+  format: combine(
+    colorize(),
+    label({ label: '¯_(ツ)_/¯' }),
+    timestamp(),
+    printFormat
+  ),
   transports: [
     new transports.Console({
-      format: format.colorize()
+      format: winston.format.colorize()
     }),
     new transports.File({
       level: 'error',
