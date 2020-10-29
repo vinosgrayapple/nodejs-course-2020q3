@@ -66,30 +66,26 @@ app.use((err, req, res, next) => {
   res.status(err.status).json(`${err.status}. ${err.message}`)
 })
 
-module.exports = app
-//
 function authenticateToken(req, res, next) {
   const authHeader = req.headers.authorization
   const token = authHeader && authHeader.split(' ')[1]
   if (token === null) throw createError(UNAUTHORIZED, 'No token!')
 
   jwt.verify(token, process.env.JWT_SECRET_KEY, (err, user) => {
-    // console.log(err)
     if (err) throw createError(UNAUTHORIZED, 'Token invalid!')
     req.user = user
     next()
   })
 }
-//
-// @
-// @
-// @
-// // check "uncaughtException" handler
+
+module.exports = app
+
+// ****** check "uncaughtException" handler
 // setTimeout(() => {
 //   throw Error('Oops!')
 // }, 2000)
 // @
-// // check "unhandledRejection" handler
+// ***** check "unhandledRejection" handler
 // setTimeout(() => {
 //   Promise.reject(Error('OopsPromise!'))
 // }, 3000)

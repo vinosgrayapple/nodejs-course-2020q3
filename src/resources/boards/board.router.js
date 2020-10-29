@@ -18,7 +18,7 @@ router.route('/').post(
     res.send(board)
   })
 )
-// Get Boards by ID
+
 router.route('/:id').get(
   asyncHandler(async (req, res) => {
     const { id } = req.params
@@ -29,7 +29,7 @@ router.route('/:id').get(
     res.json(board)
   })
 )
-// Update User by ID
+
 router.put(
   '/:id',
   asyncHandler(async (req, res) => {
@@ -39,7 +39,7 @@ router.put(
     res.json(boardNew)
   })
 )
-// Delete board by ID
+
 router.delete(
   '/:id',
   asyncHandler(async (req, res) => {

@@ -8,14 +8,14 @@ const {
   validateUserData,
   validUserDataForUpdate
 } = require('../../lib/validation')
-// get All Users
+
 router.route('/').get(
   asyncHandler(async (req, res) => {
     const users = await usersService.getAll()
     res.status(OK).json(users.map(User.toResponse))
   })
 )
-// Create User
+
 router.route('/').post(
   validateUserData,
   asyncHandler(async (req, res) => {
@@ -23,7 +23,7 @@ router.route('/').post(
     res.json(User.toResponse(user))
   })
 )
-// Get user by ID
+
 router.route('/:id').get(
   asyncHandler(async (req, res) => {
     const { id } = req.params
@@ -34,7 +34,7 @@ router.route('/:id').get(
     res.json(User.toResponse(user))
   })
 )
-// Update User by ID
+
 router.route('/:id').put(
   validUserDataForUpdate,
   asyncHandler(async (req, res) => {
@@ -47,7 +47,7 @@ router.route('/:id').put(
     res.json(User.toResponse(userNew))
   })
 )
-// Delete User by ID
+
 router.route('/:id').delete(
   asyncHandler(async (req, res) => {
     const { id } = req.params
@@ -59,4 +59,5 @@ router.route('/:id').delete(
     }
   })
 )
+
 module.exports = router

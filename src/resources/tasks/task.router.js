@@ -4,7 +4,6 @@ const { NOT_FOUND, OK, NO_CONTENT } = require('http-status-codes')
 const asyncHandler = require('express-async-handler')
 const createError = require('http-errors')
 
-// get All Tasks
 router.route('/').get(
   asyncHandler(async (req, res) => {
     const { boardId } = req.params
@@ -12,7 +11,7 @@ router.route('/').get(
     res.json(tasks)
   })
 )
-// Create Task
+
 router.route('/').post(
   asyncHandler(async (req, res) => {
     const { boardId } = req.params
@@ -20,7 +19,7 @@ router.route('/').post(
     res.status(OK).send(task)
   })
 )
-// Get task  by ID
+
 router.route('/:id').get(
   asyncHandler(async (req, res) => {
     const { id, boardId } = req.params
@@ -33,7 +32,7 @@ router.route('/:id').get(
     res.json(task)
   })
 )
-// Update User by ID
+
 router.put(
   '/:id',
   asyncHandler(async (req, res) => {
@@ -46,7 +45,7 @@ router.put(
     res.status(OK).send(taskNew)
   })
 )
-// Delete task by ID
+
 router.delete(
   '/:id',
   asyncHandler(async (req, res) => {
@@ -58,4 +57,5 @@ router.delete(
     res.sendStatus(NO_CONTENT)
   })
 )
+
 module.exports = router
