@@ -1,6 +1,6 @@
 const router = require('express').Router({ mergeParams: true })
 const tasksService = require('./task.service')
-// const { catchErrors } = require('../../lib/errors')
+const { NOT_FOUND, OK, NO_CONTENT } = require('http-status-codes')
 const asyncHandler = require('express-async-handler')
 const createError = require('http-errors')
 
@@ -17,7 +17,7 @@ router.route('/').post(
   asyncHandler(async (req, res) => {
     const { boardId } = req.params
     const task = await tasksService.create(boardId, req.body)
-    res.status(200).send(task)
+    res.status(OK).send(task)
   })
 )
 // Get task  by ID
@@ -43,7 +43,7 @@ router.put(
       { _id: id, boardId },
       updateForTask
     )
-    res.status(200).send(taskNew)
+    res.status(OK).send(taskNew)
   })
 )
 // Delete task by ID
@@ -51,8 +51,11 @@ router.delete(
   '/:id',
   asyncHandler(async (req, res) => {
     const { id, boardId } = req.params
+    if (!id || !boardId) {
+      throw createError(NOT_FOUND, 'Invalid id for Board or Task')
+    }
     await tasksService.remove({ boardId, _id: id })
-    res.sendStatus(204)
+    res.sendStatus(NO_CONTENT)
   })
 )
 module.exports = router

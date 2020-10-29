@@ -2,6 +2,7 @@ const router = require('express').Router()
 const boardsService = require('./board.service')
 const createError = require('http-errors')
 const asyncHandler = require('express-async-handler')
+const { NOT_FOUND, OK } = require('http-status-codes')
 
 // get All Boards
 router.route('/').get(
@@ -44,9 +45,9 @@ router.delete(
   asyncHandler(async (req, res) => {
     const { id } = req.params
     if (await boardsService.remove(id)) {
-      res.sendStatus(200)
+      res.sendStatus(OK)
     } else {
-      throw createError(404, 'Board not found')
+      throw createError(NOT_FOUND, `Board with id: ${id} not found`)
     }
   })
 )
