@@ -48,8 +48,9 @@ app.use('/', (req, res, next) => {
   next()
 })
 app.use('/login', loginRouter)
-app.use('/users', authenticateToken, userRouter)
-app.use('/boards', authenticateToken, boardRouter)
+app.use(authenticateToken)
+app.use('/users', userRouter)
+app.use('/boards', boardRouter)
 boardRouter.use('/:boardId/tasks', taskRouter)
 
 app.use((req, res, next) => {

@@ -9,7 +9,6 @@ const create = user => usersRepo.create(user)
 
 const remove = async id => {
   const isRemoved = await usersRepo.remove(id)
-
   if (isRemoved) {
     return await taskRepo.clearUserIdAfterDelUser(id)
   }
