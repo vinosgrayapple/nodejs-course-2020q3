@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const { logger } = require('../lib/mlog')
+const userService = require('../resources/users/user.service')
 
-const User = require('../resources/users/user.model')
 mongoose.set('useFindAndModify', false)
 const { MONGO_CONNECTION_STRING } = require('../common/config')
 const connectDB = cb => {
@@ -14,7 +14,7 @@ const connectDB = cb => {
   db.once('open', async () => {
     logger.info('Connect to DB!')
     db.dropDatabase('task4')
-    User.create({ name: 'admin', login: 'admin', password: 'admin' })
+    userService.create({ name: 'admin', login: 'admin', password: 'admin' })
     cb()
   })
 }
