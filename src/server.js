@@ -9,7 +9,3 @@ connectDB(() => {
     logger.info(`Server running with PID: ${process.pid}`)
   })
 })
-
-process.on('SIGINT', () => {
-  process.kill(process.pid)
-})
