@@ -2,6 +2,6 @@ node_modules/
 .idea
 .vscode
 #.env
-tmp/
+/tmp/
 logs/*
-src/log/*
+/src/log/*.log
