@@ -2,6 +2,7 @@
 const express = require('express')
 const swaggerUI = require('swagger-ui-express')
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const jwt = require('jsonwebtoken')
 >>>>>>> parent of b53fc2c... Finish:task5
@@ -17,6 +18,12 @@ const {
   UNAUTHORIZED
 } = require('http-status-codes')
 >>>>>>> parent of b53fc2c... Finish:task5
+=======
+const path = require('path')
+const YAML = require('yamljs')
+const createError = require('http-errors')
+const { INTERNAL_SERVER_ERROR, NOT_FOUND } = require('http-status-codes')
+>>>>>>> parent of 0bea569... Merge pull request #6 from vinosgrayapple/development
 
 const userRouter = require('./resources/users/user.router')
 const boardRouter = require('./resources/boards/board.router')
@@ -38,10 +45,13 @@ process
 
 const swaggerDocument = YAML.load(path.join(__dirname, '../doc/api.yaml'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 app.use(helmet())
 app.use(cors())
 >>>>>>> parent of b53fc2c... Finish:task5
+=======
+>>>>>>> parent of 0bea569... Merge pull request #6 from vinosgrayapple/development
 app.use(express.json())
 app.use(morganColorLog)
 app.use(morganLogToFile)
@@ -55,11 +65,15 @@ app.use('/', (req, res, next) => {
   next()
 })
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 app.use('/login', loginRouter)
 app.use(authenticateToken)
 >>>>>>> parent of b53fc2c... Finish:task5
+=======
+
+>>>>>>> parent of 0bea569... Merge pull request #6 from vinosgrayapple/development
 app.use('/users', userRouter)
 app.use('/boards', boardRouter)
 boardRouter.use('/:boardId/tasks', taskRouter)
@@ -75,6 +89,7 @@ app.use((err, req, res, next) => {
     stack: err.stack
   }
   logger.error(errObj)
+<<<<<<< HEAD
 <<<<<<< HEAD
   res.status(err.status).json(errObj)
 })
@@ -95,6 +110,11 @@ function authenticateToken(req, res, next) {
 }
 >>>>>>> parent of b53fc2c... Finish:task5
 
+=======
+  res.status(err.status).json(errObj)
+})
+
+>>>>>>> parent of 0bea569... Merge pull request #6 from vinosgrayapple/development
 module.exports = app
 // @
 // @

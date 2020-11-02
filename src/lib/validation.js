@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const Joi = require('joi')
 const createError = require('http-errors')
@@ -46,3 +47,5 @@ function validateRequest(req, next, schema) {
 }
 module.exports = { validateUserData, validUserDataForUpdate }
 
+=======
+>>>>>>> parent of 0bea569... Merge pull request #6 from vinosgrayapple/development
