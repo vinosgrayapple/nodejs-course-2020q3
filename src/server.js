@@ -11,3 +11,7 @@ connectDB(() => {
     console.log(`App is running on http://localhost:${PORT}`)
   })
 })
+
+process.on('SIGINT', () => {
+  process.kill(process.pid)
+})
