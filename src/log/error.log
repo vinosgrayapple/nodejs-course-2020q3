@@ -37,3 +37,29 @@
 2020-10-27T22:51:03.893Z [🔥🔥🔥] error: undefined listen EADDRINUSE: address already in use :::4000
 2020-10-27T23:08:40.349Z [🔥🔥🔥] error: undefined listen EADDRINUSE: address already in use :::4000
 2020-10-27T23:08:40.408Z [🔥🔥🔥] error: undefined listen EADDRINUSE: address already in use :::4000
+2020-11-02T09:46:13.853Z [🔥🔥🔥] error: 404 Not Found
+2020-11-02T09:46:13.869Z [🔥🔥🔥] error: 404 Not Found
+2020-11-02T09:46:13.914Z [🔥🔥🔥] error: 404 Not Found
+2020-11-02T09:46:15.287Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f9fd566d901790d176eea10","boardId":"5f9fd565d901790d176eea0d"} not found
+2020-11-02T09:46:15.518Z [🔥🔥🔥] error: 404 Board with id: 5f9fd567d901790d176eea17 not found
+2020-11-02T09:46:15.669Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Task"
+2020-11-02T09:46:15.764Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Task"
+2020-11-02T09:46:15.768Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Task"
+2020-11-02T09:46:16.011Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "123" at path "_id" for model "User"
+2020-11-02T09:46:16.028Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f9fd567d901790d176eea1e","boardId":"5f9fd567d901790d176eea1a"} not found
+2020-11-02T09:46:16.030Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f9fd567d901790d176eea1c","boardId":"5f9fd567d901790d176eea1a"} not found
+2020-11-02T09:46:16.031Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f9fd567d901790d176eea1f","boardId":"5f9fd567d901790d176eea1a"} not found
+2020-11-02T09:46:16.032Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f9fd567d901790d176eea1d","boardId":"5f9fd567d901790d176eea1a"} not found
+2020-11-02T09:46:16.033Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f9fd567d901790d176eea20","boardId":"5f9fd567d901790d176eea1a"} not found
+2020-11-02T09:46:16.096Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "User"
+2020-11-02T09:46:16.099Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "User"
+2020-11-02T09:46:16.303Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Board"
+2020-11-02T09:46:16.389Z [🔥🔥🔥] error: 500 Update Board
+2020-11-02T09:46:16.392Z [🔥🔥🔥] error: 500 Cast to ObjectId failed for value "12345" at path "_id" for model "Board"
+2020-11-02T09:46:24.288Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f9fd56fd901790d176eea28","boardId":"5f9fd56fd901790d176eea26"} not found
+2020-11-02T09:46:24.495Z [🔥🔥🔥] error: 404 Board with id: 5f9fd570d901790d176eea30 not found
+2020-11-02T09:46:24.984Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f9fd570d901790d176eea34","boardId":"5f9fd570d901790d176eea32"} not found
+2020-11-02T09:46:24.987Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f9fd570d901790d176eea36","boardId":"5f9fd570d901790d176eea32"} not found
+2020-11-02T09:46:24.989Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f9fd570d901790d176eea37","boardId":"5f9fd570d901790d176eea32"} not found
+2020-11-02T09:46:24.990Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f9fd570d901790d176eea35","boardId":"5f9fd570d901790d176eea32"} not found
+2020-11-02T09:46:24.990Z [🔥🔥🔥] error: 404 Task with id: {"_id":"5f9fd570d901790d176eea38","boardId":"5f9fd570d901790d176eea32"} not found
