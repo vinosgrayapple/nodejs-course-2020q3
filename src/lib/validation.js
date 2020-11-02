@@ -23,7 +23,7 @@ function validUserDataForUpdate(req, res, next) {
   validateRequest(req, next, schema)
 }
 
-// helper functions
+// helper validation functions
 
 function validateRequest(req, next, schema) {
   const options = {

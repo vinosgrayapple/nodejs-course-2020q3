@@ -285,3 +285,25 @@
 2020-10-30T11:40:19.173Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
 2020-10-30T11:40:19.184Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
 2020-10-30T11:41:37.568Z [^_^] [31merror[39m:  User is not defined
+2020-11-02T11:52:44.052Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-11-02T11:52:44.130Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-11-02T11:52:44.160Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-11-02T11:52:44.178Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-11-02T11:52:44.187Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-11-02T11:52:44.381Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-11-02T11:52:44.390Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-11-02T11:52:44.405Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-11-02T11:52:44.414Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-11-02T11:52:44.428Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-11-02T11:52:44.725Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-11-02T11:52:44.732Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-11-02T11:52:44.742Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-11-02T11:52:44.756Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-11-02T11:52:44.766Z [¯_(ツ)_/¯] [31merror[39m: 401 Token invalid!
+2020-11-02T11:52:50.061Z [¯_(ツ)_/¯] [31merror[39m: 404 Board with id: 5f9ff311f608cb4467ed85d1 not found
+2020-11-02T11:52:50.941Z [¯_(ツ)_/¯] [31merror[39m: 404 Task with id: {"_id":"5f9ff312f608cb4467ed85d3","boardId":"5f9ff312f608cb4467ed85d2"} not found
+2020-11-02T11:52:50.955Z [¯_(ツ)_/¯] [31merror[39m: 404 Task with id: {"_id":"5f9ff312f608cb4467ed85d6","boardId":"5f9ff312f608cb4467ed85d2"} not found
+2020-11-02T11:52:50.963Z [¯_(ツ)_/¯] [31merror[39m: 404 Task with id: {"_id":"5f9ff312f608cb4467ed85d4","boardId":"5f9ff312f608cb4467ed85d2"} not found
+2020-11-02T11:52:50.967Z [¯_(ツ)_/¯] [31merror[39m: 404 Task with id: {"_id":"5f9ff312f608cb4467ed85d5","boardId":"5f9ff312f608cb4467ed85d2"} not found
+2020-11-02T11:52:50.968Z [¯_(ツ)_/¯] [31merror[39m: 404 Task with id: {"_id":"5f9ff312f608cb4467ed85d7","boardId":"5f9ff312f608cb4467ed85d2"} not found
+2020-11-02T11:52:52.676Z [¯_(ツ)_/¯] [31merror[39m: 404 Task with id: {"_id":"5f9ff313f608cb4467ed85d9","boardId":"5f9ff313f608cb4467ed85d8"} not found
