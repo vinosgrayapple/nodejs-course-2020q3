@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 const Joi = require('joi')
 const createError = require('http-errors')
 
@@ -23,7 +25,7 @@ function validUserDataForUpdate(req, res, next) {
   validateRequest(req, next, schema)
 }
 
-// helper functions
+// helper validation functions
 
 function validateRequest(req, next, schema) {
   const options = {
@@ -44,3 +46,6 @@ function validateRequest(req, next, schema) {
   return next()
 }
 module.exports = { validateUserData, validUserDataForUpdate }
+
+=======
+>>>>>>> parent of 0bea569... Merge pull request #6 from vinosgrayapple/development
