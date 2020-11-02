@@ -5,17 +5,23 @@ const rfs = require('rotating-file-stream')
 const path = require('path')
 const winston = require('winston')
 const { createLogger, format, transports } = winston
-const { combine, timestamp, label, printf } = format
+const { combine, timestamp, label, printf, colorize } = format
 const printFormat = printf(
   ({ level, message, label: labels, timestamp: timestamps, status }) => {
-    return `${timestamps} [${labels}] ${level}: ${status} ${message}`
+    return `${timestamps} [${status > 400 ? labels : '^_^'}] ${level ||
+      ''}: ${status || ''} ${message}`
   }
 )
 const logger = createLogger({
-  format: combine(label({ label: '🔥🔥🔥' }), timestamp(), printFormat),
+  format: combine(
+    colorize(),
+    label({ label: '¯_(ツ)_/¯' }),
+    timestamp(),
+    printFormat
+  ),
   transports: [
     new transports.Console({
-      format: format.colorize()
+      format: winston.format.colorize()
     }),
     new transports.File({
       level: 'error',
@@ -66,6 +72,7 @@ const accessLogStream = rfs.createStream('access.log', {
   interval: '1d',
   path: path.join(__dirname, '..', 'log')
 })
+
 const morganLogToFile = morgan('combined', { stream: accessLogStream })
 
 module.exports = { morganColorLog, morganLogToFile, logger }
