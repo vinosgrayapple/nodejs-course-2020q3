@@ -4,4 +4,4 @@ node_modules/
 #.env
 /tmp/
 logs/*
-/src/log/*.log
+src/log/
