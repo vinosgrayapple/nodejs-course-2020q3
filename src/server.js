@@ -1,11 +1,13 @@
-const { PORT } = require('./common/config')
-const { logger } = require('./lib/mlog')
+process.on('SIGINT', () => {
+  console.log('SIGINT')
+  process.kill(process.pid)
+})
+console.log('PID: ', process.pid)
 const { connectDB } = require('./db')
+const { PORT } = require('./common/config')
 const app = require('./app')
-
 connectDB(() => {
   app.listen(PORT, () => {
-    logger.info(`App is running on http://localhost:${PORT}`)
-    logger.info(`Server running with PID: ${process.pid}`)
+    console.log(`App is running on http://localhost:${PORT}`)
   })
 })

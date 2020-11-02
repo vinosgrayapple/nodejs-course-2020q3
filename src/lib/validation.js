@@ -1,3 +1,4 @@
+
 const Joi = require('joi')
 const createError = require('http-errors')
 
@@ -44,3 +45,4 @@ function validateRequest(req, next, schema) {
   return next()
 }
 module.exports = { validateUserData, validUserDataForUpdate }
+
