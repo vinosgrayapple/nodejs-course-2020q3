@@ -4,14 +4,12 @@ const createError = require('http-errors')
 const asyncHandler = require('express-async-handler')
 const { NOT_FOUND, OK } = require('http-status-codes')
 
-// get All Boards
 router.route('/').get(
   asyncHandler(async (req, res) => {
     const boards = await boardsService.getAll()
     res.json(boards)
   })
 )
-// Create Boards
 router.route('/').post(
   asyncHandler(async (req, res) => {
     const board = await boardsService.create(req.body)
