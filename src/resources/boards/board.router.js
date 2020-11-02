@@ -3,14 +3,12 @@ const boardsService = require('./board.service')
 const createError = require('http-errors')
 const asyncHandler = require('express-async-handler')
 
-// get All Boards
 router.route('/').get(
   asyncHandler(async (req, res) => {
     const boards = await boardsService.getAll()
     res.json(boards)
   })
 )
-// Create Boards
 router.route('/').post(
   asyncHandler(async (req, res) => {
     const board = await boardsService.create(req.body)
