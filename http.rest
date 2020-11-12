@@ -1,5 +1,7 @@
 ###
 POST  http://localhost:4000/login
+###
+POST  http://localhost:4000/login
 Content-Type: application/json
 
 {
@@ -10,15 +12,27 @@ Content-Type: application/json
 GET http://localhost:4000/boards/
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6ImFkbWluIiwiX2lkIjoiNWY5OTcxNjJmNTA0NjgzNzY4Yjk5NGY1IiwiaWF0IjoxNjAzODkxNTYyLCJleHAiOjE2MDM4OTUxNjJ9.0t2H2Nn3_n-4pioCcIvmveNBOZJ0PermAFzfp_i45_g
 ###
-GET http://localhost:4000/boards/undefined
+GET http://localhost:4000/users/5fa6c017115be5145ed90909
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6ImFkbWluIiwiX2lkIjoiNWZhNmJiOTdhNGEzYWExMWViNmM5YTYzIiwiaWF0IjoxNjA0NzYyNTUwLCJleHAiOjE2MDQ3NjYxNTB9.eh-8ZsYZpCZ4YQMys0rW9HIwOMKFB5tWnZgToO9KFEQ
 ###
-POST http://localhost:4000/users/
+PUT http://localhost:4000/users/5fa6c017115be5145ed90909
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6ImFkbWluIiwiX2lkIjoiNWZhNmJiOTdhNGEzYWExMWViNmM5YTYzIiwiaWF0IjoxNjA0NzYyNTUwLCJleHAiOjE2MDQ3NjYxNTB9.eh-8ZsYZpCZ4YQMys0rW9HIwOMKFB5tWnZgToO9KFEQ
 Content-Type: application/json
 
 {
-  "name":"admin",
-  "login":"admin",
-  "password":"T35t_P@55w22330rd"
+  "name":"admin11",
+  "login":"admin11"
+}
+
+###
+POST http://localhost:4000/users/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6ImFkbWluIiwiX2lkIjoiNWZhNmJiOTdhNGEzYWExMWViNmM5YTYzIiwiaWF0IjoxNjA0NzYyNTUwLCJleHAiOjE2MDQ3NjYxNTB9.eh-8ZsYZpCZ4YQMys0rW9HIwOMKFB5tWnZgToO9KFEQ
+Content-Type: application/json
+
+{
+  "name":"vinos",
+  "login":"vinos"
+  ,"password":"T35t_P@55w22330rd"
 }
 ###
 PUT http://localhost:4000/users/1fdadac4-df69-459a-a80c-63f8dc753c4b

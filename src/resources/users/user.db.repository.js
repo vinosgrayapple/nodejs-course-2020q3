@@ -14,7 +14,11 @@ const update = async (_id, userNew) => {
     await User.findByIdAndUpdate(_id, userNew)
     return get(_id)
   } catch (err) {
-    throw createError(404, `User with id: ${_id}!! NOT FOUND`)
+    throw createError(
+      404,
+      `User with id: ${_id}!! NOT FOUND
+    ${err}`
+    )
   }
 }
 module.exports = { getAll, get, create, update, remove }
